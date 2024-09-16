@@ -9,7 +9,114 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Case 1 - A woman returning from Indonesia with a headache.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Case 1 - A woman returning from Indonesia with a headache" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="EE1D84C6-46D2-4D3D-8566-86E9C12C9FA0" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">//when user clicks on the word Malignancy...
+<tw-storydata name="Case 1 - A woman returning from Indonesia with a headache" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="EE1D84C6-46D2-4D3D-8566-86E9C12C9FA0" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.mosquito {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    z-index: 1000;
+    animation: spinAndFlyAway 6s linear 1 forwards;
+    cursor: pointer;
+}
+
+@keyframes spinAndFlyAway {
+    0% {
+        transform: translate(-150%, -150%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-100%, 100%) rotate(100deg);
+    }
+    100% {
+        transform: translate(-250%, -250%) rotate(540deg);
+        opacity: 0.5;
+    }
+}
+
+.glitter-text {
+    position: relative;
+    color: #FFD700; /* Gold color for the text */
+    font-weight: bold; /* Make the text bold */
+    animation: glitter 5s ease-in-out;
+}
+
+@keyframes glitter {
+    0%, 100% {
+        text-shadow: 0 0 4px #FFD700, 0 0 10px #FFD700, 0 0 15px #FF4500;
+    }
+    50% {
+        text-shadow: 0 0 6px #FF4500, 0 0 12px #FFD700, 0 0 20px #FFD700;
+    }
+}
+
+
+.rainbow-text {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 3s infinite linear;
+    font-weight: bold; /* Optional: To make the text stand out more */
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+.rainbow-glitter-text {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text;
+    color: transparent;
+    background-size: 200%; /* Ensures full rainbow shows */
+    animation: rainbow 4s infinite linear, glitter 1s ease-in-out;
+    font-weight: bold;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes glitter {
+    0%, 100% {
+        text-shadow: 0 0 4px #FFD700, 0 0 10px #FFD700, 0 0 15px #FF4500;
+    }
+    50% {
+        text-shadow: 0 0 6px #FF4500, 0 0 12px #FFD700, 0 0 20px #FFD700;
+    }
+}
+
+.image-row {
+    display: flex; /* Arrange the images in a row */
+    justify-content: space-between; /* Add equal spacing between the images */
+    gap: 20px; /* Controls the space between the images */
+}
+
+.image-row img {
+    width: 200px; /* Adjust the size of the images */
+}
+
+
+.glow {
+    color: #fff;
+    text-shadow: 
+        0 0 5px #00FFFF,
+        0 0 10px #00FFFF,
+        0 0 20px #00FFFF,
+        0 0 30px #00FFFF,
+        0 0 40px #00FFFF,
+        0 0 50px #00FFFF,
+        0 0 60px #00FFFF;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">//when user clicks on the word Malignancy...
 $(document).on('click', '.malignancy', function() {
     // Create a div element for the response
     var responseElement = $('<div>').text("This patient’s liver, spleen, chest, and brain involvement suggests a disseminated process, including malignancy. Central nervous system lymphoma is less likely given she is HIV negative, and the lesions are much smaller than what would be expected with lymphoma. Carcinomatous meningitis can also cause severe hypoglycorrhachia and should also be ruled out.");
@@ -67,27 +174,37 @@ $(document).on('click', '.brucella', function() {
 
 
 
-</script><tw-passagedata pid="1" name="Initial Presentation" tags="" position="75,525" size="100,100">&#39;&#39;Case 1 - a returning traveller from Indonesia with fever and confusion
+</script><tw-passagedata pid="1" name="Initial Presentation" tags="" position="50,500" size="100,100">&#39;&#39;Case 1 - a returning traveller from Indonesia with fever and confusion
 &#39;&#39;
-A previously healthy 47-year-old Indonesian born woman is brought to the emergency department (ED) in winter of 2021 with two weeks of headaches, fevers, chills, and lethargy. The patient has been living in the United States (US) for the last 10 years and travelled to visit her family in Papua, Indonesia one month prior to presentation. Two weeks into her stay, she developed diffuse bilateral headaches, fevers, and chills. She then developed a brief cough that resolved after 2 days. She did not have any rashes, abdominal pain, vomiting, diarrhea, chest pain or shortness of breath. She returned to the US two days ago. Today, her husband found her to be increasingly lethargic and brought her to your ED.
+A previously healthy 47-year-old Indonesian born woman is brought to the emergency department (ED) in winter of 2021 with two weeks of headaches, fevers, chills, and lethargy. The patient has been living in Detroit, Michigan for the last 10 years. She travelled to visit her family in Papua, Indonesia one month prior to presentation. Two weeks into her stay, she developed diffuse bilateral headaches, fevers, and chills. She then developed a brief cough that resolved after 2 days. She did not have any rashes, abdominal pain, vomiting, diarrhea, chest pain or shortness of breath. She returned to the US two days ago. Today, her husband found her to be increasingly lethargic and brought her to your ED.
 
-[[Additional Information|Additional Hx]]</tw-passagedata><tw-passagedata pid="2" name="f. Dengue" tags="" position="400,800" size="100,100">Dengue virus (DENV) is the most frequent flavivirus circulating in Indonesia, and with an incubation period as early as 3 days, it fits with the timeline of her presentation. Although headaches are quite common, the patient did not report myalgia, arthralgia, specific retro-orbital pain or a rash which are also known to frequently occur in DENV. Neurologic manifestations such as lethargy have been described but are less common with DENV. 
+[[Additional Information|Additional Hx]]</tw-passagedata><tw-passagedata pid="2" name="f. Dengue" tags="" position="325,775" size="100,100">Dengue virus (DENV) is the most frequent flavivirus circulating in Indonesia, and with an incubation period as early as 3 days, it fits with the timeline of her presentation. Although headaches are quite common, the patient did not report myalgia, arthralgia, specific retroorbital pain or a rash which are also known to frequently occur in DENV. Neurologic manifestations such as lethargy have been described but are less common with DENV. 
 
 &#39;&#39;(text-colour:red)[What is your next step in diagnosing DENV in this patient?]&#39;&#39;
 [[Order Dengue-specific IgM|DENVIGM]]
 [[Check blood cultures|DENVBLDCX]]
 [[Check RT-PCR to detect Dengue viral RNA in the blood|DENVPCR]]
 [[DENV is a clinical diagnosis. No other testing is needed|DENVNONE]]
-</tw-passagedata><tw-passagedata pid="3" name="Additional Hx" tags="" position="250,525" size="100,100">
+</tw-passagedata><tw-passagedata pid="3" name="Additional Hx" tags="" position="250,550" size="100,100">
+(text-colour:orange)[&#39;&#39;Physical Examination&#39;&#39;]
 Her temperature is 39.4°C; vital signs are otherwise unremarkable. Physical examination reveals she is somnolent but arousable and oriented with repeated questioning. She has a slightly unsteady gait but no focal weakness. You attempt to flex the her neck forward, bringing the chin toward the chest, and encounter very mild resistance. She has mild tenderness to palpation of her mid and right upper abdomen, which is otherwise soft, not distended and without splenomegaly or hepatomegaly. There is no cervical or axillary lymphadenopathy appreciated. 
 
-The white-cell count (WBC) is 8,000/cmm; the hemoglobin level is 13.3 g/dL, and the platelet count is 286,000/cmm. A basic metabolic panel, liver enzymes, and hemolysis labs were normal. A multiplex polymerase chain reaction (PCR) assay is negative for SARS-CoV-2 and other respiratory viruses. 
 
+(text-colour:orange)[&#39;&#39;Laboratory Values&#39;&#39;]
+The white-cell count (WBC) is 8,000/cmm; the hemoglobin level is 13.3 g/dL, and the platelet count is 286,000/cmm. A basic metabolic panel, liver enzymes, and bilirubin levels were normal. A multiplex polymerase chain reaction (PCR) assay is negative for SARS-CoV-2, influenza, RSV, adenovirus, human metapneumovirus, human rhinovirus/enterovirus, and parainfluenza viruses. 
+
+&lt;div class=&quot;image-row&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/NPswab.jpg&quot; style=&quot;width: 25%; border-radius: 50%;&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/bloodtube.jpg&quot; style=&quot;width: 25%; border-radius: 50%;&quot;&gt;
+&lt;/div&gt;
+
+(text-colour:orange)[&#39;&#39;Imaging&#39;&#39;]
 A frontal image of the chest was obtained on portable radiograph (Figure 1) and showed patchy consolidative opacities in the right midlung field.
 
-&lt;img src=&quot;CXR Case 1.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/CXR Case 1.png&quot;&gt;
 
-&#39;&#39;Figure 1. Chest Radiograph&#39;&#39; - A chest radiograph shows patchy consolidative opacities in the right midlung field.
+
+(text-style:&quot;italic&quot;)[&#39;&#39;Figure 1.&#39;&#39;] A chest radiograph shows patchy consolidative opacities in the right midlung field.
 
 [[Next|DIAGNOSES]]
 
@@ -99,53 +216,60 @@ A more detailed history was obtained from the patient’s husband, who was feeli
 ][[Yes - return to choices for workup|MalariaDx]]
 [[No, a different diagnosis is more likely - return to different choices for pathogens|DIAGNOSES]]
 
-</tw-passagedata><tw-passagedata pid="5" name="Malaria" tags="" position="525,150" size="100,100">This is an otherwise healthy patient presenting with fever and altered mental status, with recent travel to Indonesia, a country in Southeast Asia. Malaria would be high on the differential, as you have correctly deduced. In Indonesia, Plasmodium falciparum and Plasmodium vivax caseloads are almost equal (1). You wonder if the patient took malaria prophylaxis, had frequent mosquito bites, and visited rural areas. 
+</tw-passagedata><tw-passagedata pid="5" name="Malaria" tags="" position="475,125" size="100,100">&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/mosquito.png&quot; class=&quot;mosquito&quot;&gt;
+
+&#39;&#39;Summary:&#39;&#39;
+This is an otherwise healthy patient presenting with fever and altered mental status, with recent travel to Indonesia, a country in Southeast Asia. Malaria would be high on the differential, as you have correctly deduced. In Indonesia, Plasmodium falciparum and Plasmodium vivax caseloads are almost equal (1). You wonder if the patient took malaria prophylaxis, had frequent mosquito bites, and visited rural areas. 
 
 
-Now given her altered mental status, you consider if this is //cerebral malaria//, which occurs more commonly in //nonimmune individuals// than in those living in highly endemic areas. It is possible she remains immune given she emigrated less than a decade ago. 
+Now given her altered mental status, you consider if this is //(text-colour:yellow)[cerebral malaria]//, which occurs more commonly in //(text-colour:yellow)[nonimmune individuals]// than in those living in highly endemic areas. It is possible she remains immune given she emigrated less than a decade ago. 
 
 
-However, pointing away from this diagnosis includes &#39;&#39;lack of hemolysis&#39;&#39; or major risk factors for severe disease. Has she had a splenectomy? She should be screened for pregnancy and HIV infection? These put her at higher risk for developing severe malaria. 
+However, pointing away from this diagnosis includes &#39;&#39;(text-colour:orange)[lack of hemolysis]&#39;&#39; or major risk factors for severe disease. Has she had a splenectomy? Has she been screened for pregnancy and HIV? These conditions put her at higher risk for developing severe malaria. 
 
 
-[[Next|MalariaDx]]</tw-passagedata><tw-passagedata pid="6" name="Melidosis" tags="" position="125,675" size="100,100">Melioidosis, caused by //Burkoholderia pseudomallei//, has been reported in travelers to Indonesia, especially to rural communities during the rainy seasons. It most commonly causes pneumonia but rarely can cause meningitis. 
+[[Next|MalariaDx]]</tw-passagedata><tw-passagedata pid="6" name="Melidosis" tags="" position="75,675" size="100,100">Melioidosis, caused by //(text-colour:cyan)[Burkoholderia pseudomallei]//, has been reported in travelers to Indonesia, especially to rural communities during the rainy seasons. It most commonly causes pneumonia but rarely can cause meningitis. 
 
-In an acute infection, patients have bacteremia - spread of the organism can result in clinical manifestations involving virtually any site. Up to a quarter can present with septic shock. Patient can also develop ulcerated or purulent skin lesions
+In an acute infection, patients have bacteremia - spread of the organism can result in clinical manifestations involving virtually any site. Up to a quarter can present with septic shock. Patients can also develop ulcerated or purulent skin lesions.
 
-Individuals with certain comorbidities such as diabetes mellitus, heavy alcohol use, and chronic kidney or lung disease have a higher likelihood of symptomatic infection. This patient had none of these risk factors that she knew of.
+Individuals with certain comorbidities such as diabetes mellitus, heavy alcohol use, and chronic kidney or lung disease have a higher likelihood of symptomatic infection. This patient was not aware of having any of these risk factors.
 
 &#39;&#39;(text-colour:red)[What is your next step in diagnosing meliodosis?]
 &#39;&#39;[[a) Obtain blood cultures|bloodCxMelio]]
 [[b) Obtain sputum and urine cultures|CxAllMelio]]
 [[c) Lumbar puncture|LPMelio]]
-</tw-passagedata><tw-passagedata pid="7" name="Toxo" tags="" position="300,300" size="100,100">Indonesia has a high prevalence of Toxoplasma gondii. It is common to consume goat, sheep, beef, chicken, and rabbit satay, potentially as undercooked meat, accompanied by raw vegetables. 
+</tw-passagedata><tw-passagedata pid="7" name="Toxo" tags="" position="375,325" size="100,100">Indonesia has a high prevalence of Toxoplasma gondii. It is common to consume goat, sheep, beef, chicken, and rabbit satay, potentially as undercooked meat, accompanied by raw vegetables. 
 
-Patients with acute toxoplasmosis typically present with constitutional symptoms, such as fever, chills, and sweats; however, these symptoms are generally mild, and the febrile episodes usually last two to three days. The most common clinical manifestation of acute toxoplasmosis is bilateral, symmetrical, nontender cervical adenopathy. Headaches, myalgias, pharyngitis, hepatosplenomegaly, and/or a diffuse non-pruritic maculopapular rash may also occur [16].
+Immunocompetent persons with primary infection are usually asymptomatic. However, in some immunocompetent hosts, //T. gondii //infection can present as an acute systemic infection with fevers, chills, sweats, and which typically develops 5 to 23 days after aquisition of the organism. These symptoms are generally mild, and the febrile episodes usually last two to three days. The most common clinical manifestation of acute toxoplasmosis is bilateral, symmetrical, nontender cervical adenopathy. Headaches, myalgias, pharyngitis, hepatosplenomegaly, and/or a diffuse non-pruritic maculopapular rash may also occur [16].
 
+In immunocompromised persons, CNS disease is rare. 
 
-What is your next step in diagnosing toxoplasmosis at this time?
-[[a) Brain MRI|MRIToxo]]
+(text-colour:red)[&#39;&#39;What is your next step in diagnosing toxoplasmosis at this time?
+&#39;&#39;][[a) Brain MRI|MRIToxo]]
 [[b) ELISA|ELISA]]
-[[c) Lumbar puncture|LPToxo]]</tw-passagedata><tw-passagedata pid="8" name="TB" tags="" position="650,1025" size="100,100">Tuberculosis (TB) is continuously reported in Indonesia and classified as a re-emerging illness. Has she had contact with anyone with TB? Did she ever have a positive and untreated TB screen? It is certainly possible to develop isolated TB meningitis; however, she had a short-lived cough. 
+[[c) Lumbar puncture|LPToxo]]</tw-passagedata><tw-passagedata pid="8" name="TB" tags="" position="675,900" size="100,100">Tuberculosis (TB) is continuously reported in Indonesia and classified as a re-emerging illness. Has she had contact with anyone with TB? Did she ever have a positive and untreated TB screen? It is certainly possible to develop isolated TB meningitis given her headache, fevers and altered mental status; however, she also had a short-lived cough. 
 
-(text-colour:orange)[&#39;&#39;What would you like to obtain at this time?&#39;&#39;
-][[MRI|MRI]]
-[[LP]]
-[[Blood cultures]]
-[[Neurology consultation]]
-[[Additional history]]
-</tw-passagedata><tw-passagedata pid="9" name="DIAGNOSES" tags="" position="600,475" size="100,100">(text-colour:red)[What do you think the pathogen is? 
+(text-colour:orange)[&#39;&#39;What is your next step in diagnosing TB meningitis for this patient?&#39;&#39;
+][[a. MRI|MriTooEarly]]
+[[b. Lumbar puncture|LPincorrect]]
+[[c. Head CT without contrast|CThead]]
+[[d. Sputum Sample with AFB smear and culture|Sputum]]
+[[e. Blood cultures|Blood cultures]]
+[[f. Obtain an interferon-gamma release assay (IGRA)|Igra]]
+</tw-passagedata><tw-passagedata pid="9" name="DIAGNOSES" tags="" position="575,550" size="100,100">(text-colour:red)[What do you think the pathogen is? 
 ]
 [[a. Malaria|Malaria]]
 [[b. Burkholderia pseudomallei|Melidosis]]
 [[c. Mycobacterium tuberculosis|TB]]
 [[d. Streptococcus pneumonia meningitidis|Strep]]
 [[e. Toxoplasma gondii|Toxo]]
-[[f. Dengue]]</tw-passagedata><tw-passagedata pid="10" name="MRI" tags="" position="900,875" size="100,100">
-Describe what you see in the MRI images below
+[[f. Dengue]]</tw-passagedata><tw-passagedata pid="10" name="MRI" tags="" position="950,900" size="100,100">The MRI is ordered STAT but does not get performed until 24 hours later. The patient remains lethargic without any clinical improvement and with similar vitals.
+
+
+Describe the key finding in the MRI image below:
 
 Panel A
-&lt;img src=&quot;MRI_A.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_A.png&quot;&gt;
 
 &lt;input type=&quot;text&quot; id=&quot;response&quot; style=&quot;border: 2px solid white;&quot;&gt;
 &lt;button onclick=&quot;
@@ -163,27 +287,26 @@ Panel A
 &lt;p id=&quot;responseMessage&quot;&gt;&lt;/p&gt;
 
 Panel B
-&lt;img src=&quot;MRI_B.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_B.png&quot;&gt;
 
 Panel C
-&lt;img src=&quot;MRI_C.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_C.png&quot;&gt;
 
 Panel D
-&lt;img src=&quot;MRI_D.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_D.png&quot;&gt;
 
-[[Answer|MRI Read Correct]]
-
-</tw-passagedata><tw-passagedata pid="11" name="LP" tags="" position="775,1000" size="100,100">Given the concern for meningitis, the patient requires an urgent lumbar puncture, which would not be contraindicated in this case given lack of concurrent focal symptoms (e.g., unilateral headache) or signs (e.g., unilateral cranial nerve deficits, hemiparesis) or the finding of papilledema.
-
-A lumbar puncture on day 2 revealed an elevated opening pressure (OP) at 42 cmH2O. Xanthochromic cerebrospinal (CSF) fluid was noted with a WBC of 382 cells/cmm with a differential of 90% lymphocytes, 7% polymorphonuclear cells and 3% monocytes; RBC 62 cells/cmm; glucose 9 mg/dL, protein 180 mg/dL. CSF pathology reveled an exuberant inflammatory response, depicting numerous lymphocytes, macrophages, and plasma cells. 
+[[Answer|MRI Read Correct]]</tw-passagedata><tw-passagedata pid="11" name="LP" tags="" position="775,1000" size="100,100">
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[A lumbar puncture on day 2 revealed an elevated opening pressure (OP) at 42 cmH2O. Xanthochromic cerebrospinal (CSF) fluid was noted with a WBC of 382 cells/cmm with a differential of 90% lymphocytes, 7% polymorphonuclear cells and 3% monocytes; RBC 62 cells/cmm; glucose 9 mg/dL, protein 180 mg/dL. CSF pathology reveled an exuberant inflammatory response, depicting numerous lymphocytes, macrophages, and plasma cells. 
 
 CSF meningitis and encephalitis panel returned negative for detection of Escherichia coli, Hemophilus influenza, Listeria, Neisseria meningitidis, Streptococcus, Cryptococcus, cytomegalovirus, human herpes virus 6, human, varicella zoster virus, enterovirus, and herpes simplex virus 1/2. The following studies also returned negative: blood cultures after 2 days of incubation, serum and CSF cryptococcal, urine Streptococcus and Legionella antigen, and a human immunodeficiency virus screen. 
+]
 
-What do you think about the glucose of 9 in CSF. What is the differential given this finding?
-[[hypoglycorrhachia]]</tw-passagedata><tw-passagedata pid="12" name="Blood cultures" tags="" position="800,1250" size="100,100">Blood cultures are negative. What would you like to do next?
+(text-colour:orange)[&#39;&#39;What do you think about the glucose of 9 in CSF. What is the differential given this finding?&#39;&#39;]
+[[hypoglycorrhachia]]</tw-passagedata><tw-passagedata pid="12" name="Blood cultures" tags="" position="850,1250" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;Blood cultures are negative&#39;&#39;]. 
 
+(text-colour:orange)[&#39;&#39;What would you like to do next?&#39;&#39;]
 [[Return to choices for workup of TB|TB]]
-[[This is less likely TB. Return to choices for alternative diagnosis|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="13" name="CT Chest" tags="" position="950,1325" size="100,100">
+[[This is less likely TB. Return to choices for alternative diagnosis|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="13" name="CT Chest" tags="" position="925,1425" size="100,100">
 Contrast-Enhanced CT of the Chest
 &lt;img src=&quot;CT1.png&quot;&gt;
 
@@ -192,6 +315,7 @@ Contrast-Enhanced CT of the Chest
 
 You decide to obtain a CT abdomen and pelvis with contrast which reveals:
 
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/CT2.png&quot;&gt;
 &lt;img src=&quot;CT2.png&quot;&gt;
 
 &lt;span style=&quot;font-size: smaller;&quot;&gt; There are at least 3 subcentimeter hypodense lesions in the liver and numerous low-density splenic lesions measuring up to 1.2 cm. &lt;/span&gt;
@@ -206,17 +330,18 @@ d. &lt;tw-link class=&quot;meliodosis&quot;&gt;Meliodosis&lt;/tw-link&gt;
 e. &lt;tw-link class=&quot;TB&quot;&gt;Disseminated tuberculosis&lt;/tw-link&gt;
 e. &lt;tw-link class=&quot;brucella&quot;&gt;Brucellosis&lt;/tw-link&gt;
 
-[[Next|RIPE]]</tw-passagedata><tw-passagedata pid="14" name="Neurology consultation" tags="" position="800,1125" size="100,100">While the rounding neurologist may give you some insight, there is currently none available at this time. Choose a different [[answer|TB]].
+[[Next|RIPE]]</tw-passagedata><tw-passagedata pid="14" name="Neurology consultation" tags="" position="925,1150" size="100,100">While the rounding neurologist may give you some insight, there is currently none available at this time. Choose a different [[answer|TB]].
 
-Note - you do not require preauthorization by neurology in order to undergo a lumbar puncture. </tw-passagedata><tw-passagedata pid="15" name="Additional history" tags="" position="575,1250" size="100,100">You make an astute consideration that more history is needed to avoid ordering unnecessary testing, delaying her dignosis, and subjecting her to unnecessary treatments. 
+Note - you do not require preauthorization by neurology in order to undergo additional testing or studies. 
+</tw-passagedata><tw-passagedata pid="15" name="Additional history" tags="" position="675,1200" size="100,100">You make an astute consideration that more history is needed to avoid ordering unnecessary testing, delaying her dignosis, and subjecting her to unnecessary treatments. 
 
 A more detailed history was obtained from the patient’s husband, who was feeling well. The patient was born in Indonesia and moved to Detroit, Michigan 9 years ago. She is up to date on her vaccinations and was screened for tuberculosis upon entry to the US. While the patient was in Indonesia, she visited friends and family in their homes. She got her hair cut and went shopping with family. Her sister had three domestic cats but the patient denies scratches or bites. Several stray cats occasionally came near her home but she had no direct contact with them. She reported no insect bites, consumption of raw food or unpasteurized products, or contact with saltwater or freshwater sources. The patient did not smoke tobacco or drink alcohol. The patient previously visited Indonesia 4 years ago. Otherwise, she had not travelled elsewhere. She denied exposure to anyone with tuberculosis, incarcerated or homeless persons. She was not on malaria prophylaxis. She had received the Bacille Calmette-Guerin vaccine as a child.
 
-What would you like to do next?
+(text-colour:orange)[&#39;&#39;What would you like to do next?&#39;&#39;]
 [[Return to choices for workup of TB|TB]]
-[[This is less likely TB. Return to choices for alternative diagnosis|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="16" name="hypoglycorrhachia" tags="" position="1125,1025" size="100,100">Although CSF glucose concentrations less than 18 mg/dL are strongly predictive of bacterial meningitis, there are certain conditions which cause severely low CSF glucose levels, generally defined as CSF glucose level ≤10 mg/dL, as was seen in this patient. Tuberculosis meningitis and fungal meningitis are reported to cause severe hypoglycorrhachia. Brucellosis and nocardiosis can also cause marked hypoglycorrhachia along with brain abscesses. Bacterial at this point seems less given the lack of neutrophils in the CSF. Carcinomatous meningitis can also cause severe hypoglycorrhachia and should also be ruled out.
+[[This is less likely TB. Return to choices for alternative diagnosis|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="16" name="hypoglycorrhachia" tags="" position="1150,1050" size="100,100">Although CSF glucose concentrations less than 18 mg/dL are strongly predictive of bacterial meningitis, there are certain conditions which cause severely low CSF glucose levels, generally defined as CSF glucose level ≤10 mg/dL, as was seen in this patient. Tuberculosis meningitis and fungal meningitis are reported to cause severe hypoglycorrhachia. Brucellosis and nocardiosis can also cause marked hypoglycorrhachia along with brain abscesses. Bacterial at this point seems less given the lack of neutrophils in the CSF. Carcinomatous meningitis can also cause severe hypoglycorrhachia and should also be ruled out.
 
-What is your next step given the LP, CXR findings, and this patient’s travel history?
+(text-colour:orange)[&#39;&#39;What is your next step given the LP, CXR findings, and this patient’s travel history?&#39;&#39;]
 [[a. This is less likely TB. Return to choices for alternative diagnosis|DIAGNOSES]]
 [[b. Check an IGRA|IGRA]]
 [[c. Get a brain MRI|MRI]]
@@ -228,28 +353,35 @@ What is your next step given the LP, CXR findings, and this patient’s travel h
 
 [[a. Check an IGRA|IGRA]]
 [[b. Get a brain MRI|MRI]]
-[[c. Place this patient in airborne precautions immediately|airborne]]
-[[d. Start the patient on RIPE|correct]]
-[[e. None of the above, I will go and see a new patient while awaiting the AFB smears|new pt]]
+[[c. Perform a lumbar puncture|LPincorrect]]
+[[d. Place this patient in airborne precautions immediately|airborne]]
+[[e. None of the above, I will go and see a new patient while awaiting the AFB smears|new pt1]]
 
-</tw-passagedata><tw-passagedata pid="18" name="airborne" tags="" position="1525,900" size="100,100">Excellent decision. 
+</tw-passagedata><tw-passagedata pid="18" name="airborne" tags="" position="1425,825" size="100,100">Excellent decision. 
 
 Her chest imaging is not specific with bilateral interstitial infiltrates but given it is not completely normal, we need to consider active pulmonary TB with possible dissemination and therefore place her in airborne isolation until she can provide three negative AFB sputum smears.
 
-A repeat LP is planned to check for CSF M. Tb PCR. She should have CSF cultures sent with priority for AFB (in addition to aerobic and fungal if enough fluid is obtained). It is important that at least 5 milliliters of CSF fluid are sent for an AFB culture to allow for greater yield of detection
-
-While awaiting the results of her LP, what would you like to obtain next?
-
+(text-colour:orange)[&#39;&#39;What would you like to obtain next?&#39;&#39;]
 [[a. Brain MRI|MRI]]
 [[b. Neurology consultation|Neurology consultation]]
 [[c. Start the patient on RIPE|correct]]
-[[d. Nothing else is needed. I will see another patient and await the LP results|new pt]]</tw-passagedata><tw-passagedata pid="19" name="IGRA" tags="" position="1325,1050" size="100,100">What if the IGRA is negative? Are you still concerned about tuberculosis in this patient?
+[[d. Lumbar puncture|LPincorrect]]
+[[e. Nothing else is needed. I will see another patient and await the LP results|new pt]]</tw-passagedata><tw-passagedata pid="19" name="IGRA" tags="" position="1425,1175" size="100,100">What if the IGRA is negative? Are you still concerned about tuberculosis in this patient?
 
 [[Yes|IGRA2]]
-[[No|IGRA2]]</tw-passagedata><tw-passagedata pid="20" name="LP Strep" tags="" position="275,950" size="100,100">
+[[No|IGRA2]]</tw-passagedata><tw-passagedata pid="20" name="LP Strep" tags="" position="250,1000" size="100,100">
+(set: $text to 0)
+(live: 0.1s)[
+  (print: (substring: &quot;Good Choice&quot;, 1, $text))
+  (set: $text to $text + 1)
+  (if: $text &gt; (length of &quot;Good Choice&quot;))[(stop:)]
+   ]You saw it, you knew it, and you acted. That’s what I’m talking about. Keep making decisions like that, and you won’t just pass—you’ll dominate. 
+
 Blood cultures should be drawn immediately. Empiric parenteral antimicrobial therapy should not be delayed by more than 2 hours to prevent mortality from potential bacterial or herpes simplex meningitis, which also needs to be ruled out in this patient. 
 
-A lumbar puncture reveals an elevated opening pressure (OP) at 42 cmH2O. Xanthochromic cerebrospinal (CSF) fluid was noted with a WBC of 382 cells/cmm with a differential of 90% lymphocytes, 7% polymorphonuclear cells and 3% monocytes; RBC 62 cells/cmm; glucose 9 mg/dL, protein 180 mg/dL. CSF pathology reveled an exuberant inflammatory response, depicting numerous lymphocytes, macrophages, and plasma cells. CSF gram stain is negative for organisms. CSF bacterial culture and CSF HSV PCR are pending.
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[ &#39;&#39;(text-colour:white)[(b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[Results]]&#39;&#39; 
+A lumbar puncture reveals an elevated opening pressure (OP) at 42 cmH2O. Xanthochromic cerebrospinal (CSF) fluid was noted with a WBC of 382 cells/cmm with a differential of 90% lymphocytes, 7% polymorphonuclear cells, and 3% monocytes; RBC 62 cells/cmm; glucose 9 mg/dL, protein 180 mg/dL. CSF pathology revealed an exuberant inflammatory response, depicting numerous lymphocytes, macrophages, and plasma cells. CSF gram stain is negative for organisms. CSF bacterial culture and CSF HSV PCR are pending.]
+
 
 
 &#39;&#39;(text-colour:red)[While awaiting blood cultures and CSF studies, what would you like to do at this time?]&#39;&#39;
@@ -257,11 +389,12 @@ A lumbar puncture reveals an elevated opening pressure (OP) at 42 cmH2O. Xanthoc
 [[a2) Start IV vancomycin and IV piperacillin-tazobactam|Vancosyn]]
 [[a3) Start IV vancomycin, IV ceftriaxone and dexamethasone|Strep ABXwDex]]
 [[a4) MRI brain|MRIStrep]]
-[[a5) Start high dose IV acyclovir therapy|acyclovir2]]</tw-passagedata><tw-passagedata pid="21" name="Strep ABX" tags="" position="775,775" size="100,100">Ideally, to improve yield of growth, blood cultures and CSF analysis/cultures should be obtained before empiric IV antimicrobial is administered. However, antimicrobials should &#39;&#39;(text-colour:red)[not]&#39;&#39; be delayed by more than 2 hours to prevent mortality from potential bacterial or herpes simplex meningitis, which also needs to be ruled out in this patient. 
+[[a5) Start high dose IV acyclovir therapy|acyclovir2]]
+[[a6) This is not Strep meningitis. Return to diagnoses|DIAGNOSES]] </tw-passagedata><tw-passagedata pid="21" name="Strep ABX" tags="" position="775,775" size="100,100">Ideally, to improve yield of growth, blood cultures and CSF analysis/cultures should be obtained before empiric IV antimicrobial is administered. However, antimicrobials should &#39;&#39;(text-colour:red)[not]&#39;&#39; be delayed by more than 2 hours to prevent mortality from potential bacterial or herpes simplex meningitis, which also needs to be ruled out in this patient. 
 
 IV glucocorticoids are recommended as part of empiric therapy for adults in the developed world with suspected community-acquired bacterial meningitis in whom the causative organism is not yet known. If IV steroids are given either prior to or with the first dose of antibiotics, this has been associated with reduced rate of complications from //S. pneumoniae// meningitis, including hearing loss, and reduced overall mortality.
 
-It can be difficult to distinguish viral and bacterial meningitis on clinical exam alone. Herpes simplex virus type 1 (HSV-1) encephalitis is the most common cause of sporadic fatal encephalitis worldwide. Due to the potentially life-threatening nature of HSV encephalitis and the importance of early treatment, acyclovir therapy should be initiated as soon as the diagnosis is suspected, ideally within hours of presentation.
+It can be difficult to distinguish viral and bacterial meningitis on clinical exam alone. Herpes simplex virus type 1 (HSV-1) encephalitis is the most common cause of sporadic fatal encephalitis worldwide. Due to the potentially life-threatening nature of HSV encephalitis and the importance of early treatment, acyclovir therapy should be initiated as soon as the diagnosis is suspected, ideally within hours of presentation. &lt;span class=&quot;glow&quot;&gt;Solid decision there.&lt;/span&gt;
 
 A lumbar puncture is the key next step if this is not already ordered. It will guide de-escalation of antimicrobials +/- steroids. A brain MRI may also be helpful to increase suspicion of HSV encephalitis; though a CSF HSV PCR will be quite useful. 
 
@@ -272,58 +405,93 @@ A lumbar puncture is the key next step if this is not already ordered. It will g
 [[Continue IV vancomycin, IV ceftriaxone, IV acyclovir, but add IV dexamethasone|Strep ABXwDex]]
 
 
-</tw-passagedata><tw-passagedata pid="22" name="Vancosyn" tags="" position="225,1425" size="100,100">When choosing empiric antibiotics for possible meningitis/encephalitis, it is important to consider if the antibiotic will have appropriate CNS penetration. Piperacillin-tazobactam has limited penetration into CSF is not considered a first-line treatment for infections that involve the central nervous system, such as meningitis. For CNS infections, other antibiotics with gram negative coverage and better penetration into the CNS, such as ceftriaxone or cefepime are preferred. Secondly, unless the patient is suspected to have a brain abscess and/or the route of brain infection is through an anaerobic source, anaerobic coverage is usually not necessary. Choose a different [[answer|Strep]]</tw-passagedata><tw-passagedata pid="23" name="MRI Read Correct" tags="" position="1075,1200" size="100,100">
-Figure 4. Brain MRI (Panel A-D) shows numerous ring-enhancing lesions throughout the cerebrum and cerebellum, some of which are concerning for superimposed hemorrhage. There is also leptomeningeal nodular enhancement of the left frontal sulci and the right sylvian fissure. There is no midline shift.
+</tw-passagedata><tw-passagedata pid="22" name="Vancosyn" tags="" position="225,1400" size="100,100">(align:&quot;&lt;==&gt;&quot;)+(box:&quot;X&quot;)[&lt;span style=&quot;font-family: &#39;Times New Roman&#39;, serif; font-style: italic;&quot;&gt;Listen, that wasn’t it. You missed something important, and now you’re facing the consequences. But let me tell you something—this is where you learn. This is where you get better. Take a breath, regroup, and figure out what went wrong. Because next time? &#39;&#39;There’s no room for mistakes&#39;&#39;.&lt;/span&gt;
+]
 
-&lt;img src=&quot;MRI_A.png&quot;&gt;
+When choosing empiric antibiotics for possible meningitis/encephalitis, it is important to consider if the antibiotic will have appropriate CNS penetration. Piperacillin-tazobactam has limited penetration into CSF is not considered a first-line treatment for infections that involve the CNS, such as meningitis. Rather, there are other antibiotics with gram negative coverage and better penetration into the CNS, such as ceftriaxone or cefepime. Additionally, unless the patient is suspected to have a brain abscess and/or the route of brain infection is through an anaerobic source, anaerobic coverage is usually not necessary. 
+
+Choose a different [[answer|Strep]]</tw-passagedata><tw-passagedata pid="23" name="MRI Read Correct" tags="" position="1125,1200" size="100,100">Figure 4. Brain MRI (Panel A-D) shows numerous ring-enhancing lesions throughout the cerebrum and cerebellum, some of which are concerning for superimposed hemorrhage. There is also leptomeningeal nodular enhancement of the left frontal sulci and the right sylvian fissure. There is no midline shift.
+
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_A.png&quot;&gt;
 Panel A: Axial T2 post gadolinium with several ring-enhancing small lesions 
 
-&lt;img src=&quot;MRI_B.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_B.png&quot;&gt;
 Panel B: Axial T1
 
-&lt;img src=&quot;MRI_C.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_C.png&quot;&gt;
 Panel C: T1 hyperintense lesions in the L temporal lobe and along the L temporal sulci 
 
-&lt;img src=&quot;MRI_D.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_D.png&quot;&gt;
 Panel D: Axial T1 with innumerable subcentimeter foci of enhancing lesions associated with susceptibility abnormality in the right frontal, bilateral temporal lobes, occipital lobes, and left cerebellum hemisphere
 
-What would you like to obtain next?
-[[Lumbar puncture|LP]]
-[[Neurology consultation]] 
-[[CT Chest|CT Chest]]</tw-passagedata><tw-passagedata pid="24" name="RIPE" tags="" position="1150,1350" size="100,100">Would you change her antimicrobial coverage at this time?
-
-A) Continue acycylovir, vancomycin, and ceftriaxone
+&#39;&#39;(text-colour:red)[What would you like to obtain next to diagnose this patient&#39;s condition?]&#39;&#39;
+[[a. Lumbar puncture|LPincorrect]]
+[[b. Neurology consultation|Neurology consultation]] 
+[[c. CT Chest|CT Chest]]
+[[d. Sputum Sample with AFB smear and culture|Sputum]]
+[[e. Blood cultures|Blood cultures]]
+[[f. Obtain an interferon-gamma release assay (IGRA)|Igra]]</tw-passagedata><tw-passagedata pid="24" name="RIPE" tags="" position="1175,1375" size="100,100">(text-colour:orange)[&#39;&#39;Would you change her antimicrobial coverage at this time?&#39;&#39;]
+[[A) No. Continue acycylovir, vancomycin, and ceftriaxone|BadAbx]]
 [[B) Stop above, start RIPE|correct]]
-C) Continue A and start RIPE
-D) Stop Vancomycin and start linezolid. Stop ceftriaxone and start penicillin IV.
-</tw-passagedata><tw-passagedata pid="25" name="correct" tags="" position="1300,1300" size="100,100">On day 3, she was transferred to the neurologic intensive care unit and initiated on isoniazid 300mg daily, vitamin B6 50 mg daily, IV rifampin 600 mg daily, pyrazinamide 1000 mg/day, ethambutol 800 mg/day (hereafter will be referred to as RIPE).
+[[C) Continue A and start RIPE|correct]]
+[[D) Stop Vancomycin and start linezolid. Stop ceftriaxone and start penicillin IV|fool]]
+</tw-passagedata><tw-passagedata pid="25" name="correct" tags="" position="1300,1300" size="100,100">
+Even if the IGRA test returns negative, if your suspicion is high for TB meningitis, immediate therapy with RIPE is recommended. The likelihood of a favorable clinical outcome is increased with early initiation of therapy; treatment delay (even for a few days) may be associated with increased likelihood of unfavorable outcome. 
 
-&#39;&#39;Would you start IV steroids?
+On day 3, she was transferred to the neurologic intensive care unit and initiated on isoniazid 300mg daily, vitamin B6 50 mg daily, IV rifampin 600 mg daily, pyrazinamide 1000 mg/day, ethambutol 800 mg/day (hereafter will be referred to as RIPE).
+
+&#39;&#39;(text-colour:orange)[Would you start IV steroids?]
 &#39;&#39;[[No|NoSteroids]]
 [[Yes|YesSteroids]]
-</tw-passagedata><tw-passagedata pid="26" name="NoSteroids" tags="" position="1300,1500" size="100,100">Studies have shown that steroids has improved mortality and outcome in patients with TB meningitis. Other CNS infections where steroids are used include neurocysticercosis.  </tw-passagedata><tw-passagedata pid="27" name="YesSteroids" tags="" position="1475,1350" size="100,100">Very good. Studies have shown that steroids has improved mortality and outcome in patients with TB meningitis. Other CNS infections where steroids are used include neurocysticercosis.  
+</tw-passagedata><tw-passagedata pid="26" name="NoSteroids" tags="" position="1350,1475" size="100,100">Studies have shown that steroids has improved mortality and outcome in patients with TB meningitis. Other CNS infections where dexamethasone was found to reduce morbidity and/or mortality include:
 
-//She was started on dexamethasone 0.4 mg/kg/day. She was placed in airborne precautions. 
-//
-[[Next|Part2]]</tw-passagedata><tw-passagedata pid="28" name="IGRA2" tags="" position="1475,1175" size="100,100">Although an interferon gamma release assay (IGRA) is 92% sensitive in individuals with active disease, it can certainly vary depending on the extent of the disease and certainly if this is primary versus reactivation. 
+* Pneumococcal meningitis
+** The efficacy of a four-day course of dexamethasone in adults with bacterial meningitis in resource-abundant countries was best evaluated in a randomized trial in 301 patients from Europe with bacterial meningitis [1]. In this trial, dexamethasone reduced both mortality (7 versus 15 percent with placebo, relative risk [RR] 0.48, 95% CI 0.24-0.96) and all unfavorable outcomes (15 versus 25 percent, RR 0.59, 95% CI 0.37-0.94).
 
-Even if the IGRA test returns negative, I would still recommend immediate therapy with RIPE and concomitant steroids. The likelihood of a favorable clinical outcome is increased with early initiation of therapy; treatment delay (even for a few days) may be associated with increased likelihood of unfavorable outcome. 
+* Neurocysticercosis 
+** Corticosteroids should always be administered concomitantly with antiparasitic therapy [1,2]. Use of corticosteroids during antiparasitic therapy is associated with fewer seizures.
 
-While awaiting the results of the IGRA, what would you like to obtain next?
 
+
+[[Return to the previous question|correct]]</tw-passagedata><tw-passagedata pid="27" name="YesSteroids" tags="" position="1575,1350" size="100,100">&lt;span class=&quot;rainbow-text&quot;&gt;Very good. &lt;/span&gt; Other CNS infections where dexamethasone was found to reduce morbidity and/or mortality include:
+
+* (b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[Pneumococcal meningitis]
+** The efficacy of a four-day course of dexamethasone in adults with bacterial meningitis in resource-abundant countries was best evaluated in a randomized trial in 301 patients from Europe with bacterial meningitis [1]. In this trial, dexamethasone reduced both mortality (7 versus 15 percent with placebo, relative risk [RR] 0.48, 95% CI 0.24-0.96) and all unfavorable outcomes (15 versus 25 percent, RR 0.59, 95% CI 0.37-0.94).
+
+* (b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[Neurocysticercosis] 
+** Corticosteroids should always be administered concomitantly with antiparasitic therapy [1,2]. Use of corticosteroids during antiparasitic therapy is associated with fewer seizures.
+
+
+She was started on dexamethasone 0.4 mg/kg/day. She was placed in airborne precautions.
+
+[[Next|Part2]]</tw-passagedata><tw-passagedata pid="28" name="IGRA2" tags="" position="1575,1075" size="100,100">Although an interferon gamma release assay (IGRA) is 92% sensitive in individuals with active disease, it can certainly vary depending on the extent of the disease and certainly if this is primary versus reactivation. A positive result //supports// (but cannot be used to establish) a diagnosis of active TB disease, and a negative result does not rule out active TB disease.
+
+(text-colour:orange)[&#39;&#39;While awaiting the results of the IGRA, what would you like to obtain next?&#39;&#39;]
 [[a. Brain MRI|MRI]]
 [[b. Place this patient in airborne precautions immediately|airborne]]
 [[c. Neurology consultation|Neurology consultation]]
 [[d. Start the patient on RIPE|correct]]
-</tw-passagedata><tw-passagedata pid="29" name="Part2" tags="" position="1525,1500" size="100,100">A transthoracic echocardiogram was obtained and returned negative for vegetations, reduced cardiac function, or valvulopathy. Serologies for Brucella, Strongyloides, cysticercosis, and endemic fungi all returned negative. Toxoplasmosis IgM was negative, but IgG was positive. Urine antigens for blastomycoses and histoplasmosis also returned negative. On day 4, a repeat lumbar puncture was performed with the following CSF fluid analysis: 382 WBC with 43% lymphocytes, protein 134, glucose 39, an opening pressure of 27. CSF bacterial cultures remained negative for growth. Her IGRA returned positive and a Mycobacterium tuberculosis Complex (MTb) PCR in the CSF returned positive. Her CSF AFB cultures remained negative after 7 days of incubation. 
+[[e. Lumbar puncture|LPincorrect]]
+</tw-passagedata><tw-passagedata pid="29" name="Part2" tags="" position="1525,1500" size="100,100">Further results come in:
 
-Given her CSF AFB cx are negative, would you stop RIPE or isolation?
+* A transthoracic echocardiogram was obtained and returned negative for vegetations, reduced cardiac function, or valvulopathy. 
+* Serologies for Brucella, Strongyloides, cysticercosis, and endemic fungi all returned negative. 
+* Toxoplasmosis IgM was negative, but IgG was positive. 
+* Urine antigens for blastomycoses and histoplasmosis also returned negative. 
+* Her IGRA returned positive 
 
+* On day 4, a repeat lumbar puncture was performed with the following CSF fluid analysis: 382 WBC with 43% lymphocytes, protein 134, glucose 39, an opening pressure of 27. CSF bacterial cultures remained negative for growth. 
+* Mycobacterium tuberculosis Complex (MTb) PCR in the CSF returned positive. 
+* Her CSF AFB cultures remained negative after 7 days of incubation. 
+
+(text-colour:orange)[&#39;&#39;Given her CSF AFB cx are negative, would you stop RIPE or isolation?&#39;&#39;]
 [[Stop Ripe and remove isolation|StopRipe]]
 [[Continue Ripe and isolation|ContRipe]]
-</tw-passagedata><tw-passagedata pid="30" name="StopRipe" tags="" position="1750,1500" size="100,100">This woman has an aseptic lymphocytic meningitis with multifocal ring-enhancing brain lesions with pulmonary and hepatosplenic lesions. These findings coupled with exposure history, a positive IGRA and now with positive CSF MTb PCR confirms the diagnosis of disseminated tuberculosis with TB meningitis. So far, her CSF AFB cultures are negative, but we assume this is a susceptible TB strain given she has no known contacts with individuals with MDR TB. RIPE and steroids should be continued. 
+</tw-passagedata><tw-passagedata pid="30" name="StopRipe" tags="" position="1750,1500" size="100,100">&#39;&#39;(text-colour:red)[Bad choice.]&#39;&#39; 
 
-[[Next|ContRipe2]]</tw-passagedata><tw-passagedata pid="31" name="ContRipe" tags="" position="1525,1675" size="100,100">Correct. 
+This woman has an aseptic lymphocytic meningitis with multifocal ring-enhancing brain lesions with pulmonary and hepatosplenic lesions. These findings coupled with exposure history, a positive IGRA and now with positive CSF MTb PCR confirms the diagnosis of disseminated tuberculosis with TB meningitis. So far, her CSF AFB cultures are negative, but we assume this is a susceptible TB strain given she has no known contacts with individuals with MDR TB. RIPE and steroids should be continued. 
+
+[[Next|ContRipe2]]</tw-passagedata><tw-passagedata pid="31" name="ContRipe" tags="" position="1475,1675" size="100,100">&lt;span class=“glow”&gt;Correct.&lt;/span&gt;
 
 This woman has an aseptic lymphocytic meningitis with multifocal ring-enhancing brain lesions with pulmonary and hepatosplenic lesions. These findings coupled with exposure history, a positive IGRA and now with positive CSF MTb PCR confirms the diagnosis of disseminated tuberculosis with TB meningitis. So far, her CSF AFB cultures are negative, but we assume this is a susceptible TB strain given she has no known contacts with individuals with MDR TB. RIPE and steroids should be continued. 
 
@@ -335,31 +503,33 @@ This woman has an aseptic lymphocytic meningitis with multifocal ring-enhancing 
 
 On day 7, the patient’s alertness improved, and she was transferred to the floor. She was treated with two weeks of dexamethasone 0.4 mg/kg/day, after which she was transitioned to an 8-week taper. She was initiated on pneumocystis pneumonia prophylaxis with trimethoprim/sulfamethoxazole 1 double strength tablet given three days a week.
 
-[[Next|Part3]]</tw-passagedata><tw-passagedata pid="33" name="Part3" tags="" position="1750,2050" size="100,100">On day 13, she had a positive AFB sputum smear and culture with positive DNA for MTb PCR, after which she was not able to produce another sputum sample. By this time, the patient’s initial CSF AFB culture, returned positive for growth. Susceptibility drug testing was sent to the state laboratory. She was ultimately discharged on day 24 with plans to follow up with the local county health department for directly observed therapy (DOT).
+[[Next|Part3]]</tw-passagedata><tw-passagedata pid="33" name="Part3" tags="" position="1550,1975" size="100,100">On day 13, she had a positive AFB sputum smear and culture. Her sputum MTb PCR returned positive. She was not able to produce another sputum sample. By this time, the patient’s initial CSF AFB culture, returned positive for growth. Susceptibility drug testing was sent to the state laboratory. She was ultimately discharged on day 24 with plans to follow up with the local county health department for directly observed therapy (DOT).
 
-Three days after discharge, the patient was readmitted due to recurrent fevers, rigors, worsening lethargy, several episodes of vomiting and headaches. She also endorsed photophobia and phonophobia. On admission, she was tachycardic with a heart rate of 104, and febrile to 39.4 C. Her other vitals were stable. CT chest, abdomen and pelvis were unchanged from prior, and a CT head was negative for findings of increased intracranial pressure. On examination, she exhibited psychomotor slowing with slowed responses to questions, but she was otherwise oriented to person and place. She reported the date as one month prior. She was able to count backwards from 10 with ease. She follows one-step commands appropriately. She had decreased sensation over the left arm not documented at prior admission. She had no cranial nerve deficits, or nystagmus. She had normal and symmetric strength in all extremities. Her labs showed a WBC 11,000/cmm with mild elevation of her liver enzymes (AST 42, ALT 69). 
+Three days after discharge, the patient was readmitted due to recurrent fevers, rigors, worsening lethargy, several episodes of vomiting and headaches. She also endorsed photophobia and phonophobia. On admission, she was tachycardic with a heart rate of 104, and febrile to 39.4 C. Her other vitals were stable. CT chest, abdomen and pelvis were unchanged from prior, and a CT head was negative for findings of increased intracranial pressure. 
+
+On examination, she exhibited psychomotor slowing with slowed responses to questions, but she was otherwise oriented to person and place. She reported the date as one month prior. She was able to count backwards from 10 with ease. She follows one-step commands appropriately. She had decreased sensation over the left arm not documented at prior admission. She had no cranial nerve deficits, or nystagmus. She had normal and symmetric strength in all extremities. 
+
+Her labs showed a WBC 11,000/cmm with mild elevation of her liver enzymes (AST 42, ALT 69). 
 
 [[Repeat Brain MRI was done|RepeatMRI]]
-</tw-passagedata><tw-passagedata pid="34" name="RepeatMRI" tags="" position="1800,2175" size="100,100">Repeat MRI brain demonstrated progression of tuberculous meningoencephalitis with worsening leptomeningeal enhancement, associated edema, cerebritis, new mass effect, and additional subcentimeter tuberculomas 
+</tw-passagedata><tw-passagedata pid="34" name="RepeatMRI" tags="" position="1725,2000" size="100,100">Repeat MRI brain demonstrated progression of tuberculous meningoencephalitis with worsening leptomeningeal enhancement, associated edema, cerebritis, new mass effect, and additional subcentimeter tuberculomas 
 
-
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI1_Part3.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI1_Part3.png&quot;&gt;
 Panel A: There is interval progression of basilar predominant irregular leptomeningeal thickening and enhancement, primarily located in the right sylvian cistern/sylvian fissure, but also progressed within the right ambient cistern and left sylvian cistern.
 
-
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI2_Part3.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI2_Part3.png&quot;&gt;
 Panel B: Worsening FLAIR hyperintensity centered in the medial right temporal lobe and now extending superiorly into the right inferior frontal lobe and basal ganglia as well as more posteriorly in the right temporal lobe, compatible with cerebritis. There is also new 3 mm leftward shift of midline structures and partial effacement of the basal cisterns.
 
-
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI3_Part3.png&quot;&gt;
 &lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI3_Part3.png&quot;&gt;
 Panel C: There is a 5 mm solid enhancing left parasagittal frontal lobe lesion that was previously 4 mm and rim-enhancing.
 
-
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI4_Part3.png&quot;&gt;
 &lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI4_Part3.png&quot;&gt;
 Panel D: There is a 6 mm solid enhancing left cerebellar hemisphere lesion that is stable but previously rim-enhancing.
 
 [[Next|IRIS]]
-</tw-passagedata><tw-passagedata pid="35" name="IRIS" tags="" position="1750,2325" size="100,100">(text-colour:red)[&#39;&#39;What is the reason behind her worsening symptoms and readmission?&#39;&#39;]
+</tw-passagedata><tw-passagedata pid="35" name="IRIS" tags="" position="1600,2150" size="100,100">(text-colour:red)[&#39;&#39;What is the reason behind her worsening symptoms and readmission?&#39;&#39;]
 [[a. Progressive TB due to multidrug resistant (MDR-TB)|MDR]]
 [[b. Progressive TB due to poor absorption of RIPE|Absorption]]
 [[c. Paradoxical worsening due to immune reactivity|IRIS2]]
@@ -442,17 +612,22 @@ On day 9, she reported feeling markedly improved with reduced whole-body pain. S
 
 The worsening of her clinical status prompting admission is most likely secondary to TB-parodoxical reaction. 
 
-[[Next|Discussion]]</tw-passagedata><tw-passagedata pid="41" name="Discussion" tags="" position="1625,2800" size="100,100">TB meningitis is considered a medical emergency and carries high morbidity and mortality despite treatment. The major causes of morbidity are hydrocephalus, vasculitis, stroke, cranial nerve palsy with basilar meningeal involvement [Thwaites 2004]. As such, early initiation of antituberculosis therapy is critical when there is a high suspicion despite negative or pending initial workup. Use of corticosteroids as adjuvant therapy for CNS tuberculosis is recommended and likely influenced our patient’s recovery and reduction in opening pressure [Thwaites 2004].
+[[Next|Discussion]]</tw-passagedata><tw-passagedata pid="41" name="Discussion" tags="" position="1625,2800" size="100,100">(text-colour:orange)[&#39;&#39;(b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[Final Discussion]&#39;&#39;]
+TB meningitis is considered a medical emergency and carries high morbidity and mortality despite treatment. The major causes of morbidity are hydrocephalus, vasculitis, stroke, cranial nerve palsy with basilar meningeal involvement [Thwaites 2004]. As such, early initiation of antituberculosis therapy is critical when there is a high suspicion despite negative or pending initial workup. Use of corticosteroids as adjuvant therapy for CNS tuberculosis is recommended and likely influenced our patient’s recovery and reduction in opening pressure [Thwaites 2004].
+
 
 Although pulmonary TB in the United States has declined, the number of meningeal TB cases and mortality has changed little despite effective treatment regimens [CDC, 2020, Sedon 2019]. This is because recognition of the disease is often delayed due to its rarity and initial indolent course, and because initial clinical presentation can be highly variable [Sedon 2019]. Understanding the predictors for mortality is important, although this is not well studied in the literature in the immunocompetent patient. A meta-analysis performed in Vietnam reviewed mortality after 9 months of tuberculous meningitis among 951 HIV-uninfected patients; 219 (23%) of patients died. Predictors for increased mortality included disease severity grade and lower CSF lymphocyte cell count [Thao, 2018].
 
+
 This case questions the conventional view that tuberculous meningitis happens in only immunocompromised and even in otherwise healthy individuals. Our patient had no prior medical conditions, was not on any medications prior to illness, and followed with a primary care physician regularly. She did not have diabetes, renal, liver or heart disease when evaluated with a hemoglobin A1c, basic metabolic panel, liver enzymes, and trans-echocardiography. She did not smoke or drink alcohol. Lastly, she was ruled out for other infectious diseases as part of her extensive workup, including hepatitis B and C, HIV and HTLV. Her case illustrates the remarkable ability of this microbe to cause infection despite no underlying risk factors aside from travel. Therefore, it warrants continued precaution for the traveler in an endemic region to avoid significant contact with local individuals with respiratory symptoms. This is further evidenced by the incidence of tuberculosis meningitis being seemingly dependent on the prevalence of TB, which is suggested by the substantial difference in incidence across different study populations [Ducomble, Seddon 2012]
+
 
 Prior reviews of TB meningitis in immunocompetent patients have been performed; however, with broad inclusion criteria (e.g. HIV-uninfected) [Thao 2018]. Disseminated disease is a significant risk factor for the development of TB-IRIS, and the risk of IRIS is strongly associated with the burden of residual disease present at the time of immune recovery; one study found that patients with extrapulmonary and disseminated disease had an odds ratio of 8.2 for developing IRIS [ Shahani, 2016].
 
+
 It is important to recognize the presence of some genetic defects such as with interferon-gamma and interleukin-12 which predispose immunocompetent individuals to develop disseminated tuberculosis. If present, these can be helpful in screening families and counseling them in the future.
 
-[[References|references]]</tw-passagedata><tw-passagedata pid="42" name="MalariaDx" tags="" position="650,175" size="100,100">(text-colour:red)[&#39;&#39;What is your next step to determine if this patient has Malaria?
+[[References|references]]</tw-passagedata><tw-passagedata pid="42" name="MalariaDx" tags="" position="625,150" size="100,100">(text-colour:red)[&#39;&#39;What is your next step to determine if this patient has Malaria?
 &#39;&#39;][[a1) Blood cultures]]
 [[a2) Lumbar puncture]]
 [[a3) Antigen testing|RDT]]
@@ -513,21 +688,26 @@ What would you like to do now?
 [[Blood smear|Blood smear]]
 [[Obtain additional history|Malaria Hx]]
 [[This is less likely to be malaria. Return to Diagnoses|DIAGNOSES]]
-</tw-passagedata><tw-passagedata pid="45" name="Blood smear" tags="" position="900,250" size="100,100">Nice. Blood smear, that&#39;s how we roll when it comes to diagnosing malaria. Good hustle there.
+</tw-passagedata><tw-passagedata pid="45" name="Blood smear" tags="" position="950,250" size="100,100">&lt;span class=&quot;glitter-text&quot;&gt;Nice&lt;/span&gt;. Blood smear, that&#39;s how we roll when it comes to diagnosing malaria. &#39;&#39;(text-colour:red)[Good hustle there.]&#39;&#39;
 
 While awaiting the results of a thin blood smear, you review the diagnostic methods available for malaria testing.
 
+
 &#39;&#39;(text-colour:yellow)[(b4r:&quot;none&quot;,&quot;none&quot;,&quot;ridge&quot;)+(b4r-colour:white)[Microscopic Diagnosis]]&#39;&#39;
-With light microscopy, a drop of the patient’s blood is spread out as a “blood smear” on a microscope slide. The specimen is stained (e.g. Giemsa stain) to give the parasites a distinctive appearance. Light microscopy of a blood smear is the standard because it allows for:
+With light microscopy, a drop of the patient’s blood is spread out as a “blood smear” on a microscope slide. The specimen is stained (e.g. Giemsa stain seen in the middle image below) to give the parasites a distinctive appearance. Light microscopy of a blood smear is the standard because it allows for:
 * Identification of the plasmodium species
 * Quantification of the parasitemia
 * Detection of other parasites such as filariasis, trypanosomiasis, babesiosis.
+&lt;div class=&quot;image-row&quot;&gt;
+    &lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/smear.png&quot; style=&quot;width: 25%;&quot;&gt;
+  &lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/giemsa.png&quot; style=&quot;width: 25%;&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/microscope.png&quot; style=&quot;width: 25%;&quot;&gt;
+&lt;/div&gt;
 The sensitivity of microscopy depends on the experience of the laboratorian, the quality of the reagent, and of the microscope. In resource-limited settings, light microscopy may not be readilly accessible and rapid diagnostic testing is used instead, which looks for the presence of antigens/antibodies (5).
 
 
 &#39;&#39;(text-colour:yellow)[(b4r:&quot;none&quot;,&quot;none&quot;,&quot;ridge&quot;)+(b4r-colour:white)[Antigen Detection]]&#39;&#39;
-Rapid diagnostic tests are easier to use becuase they do not require highly trained lab personell, electricity or even a laboratory infrastructure. They are also fast, giving results within 15 minutes. However, they only provide a qualitative result (i.e. cannot tell you the density of the parasitemia), and those that detect antibodies cannot differentiate between a prior or acute infection. 
-
+Rapid diagnostic tests (RDTs) are easier to use because they do not require highly trained lab personell, electricity or even a laboratory infrastructure. They are also fast, giving results within 15 minutes. However, they only provide a qualitative result (i.e. cannot tell you the density of the parasitemia), and those that detect antibodies cannot differentiate between a prior or acute infection. 
 
 If initial diagnostic evaluation is negative and clinical suspicion for malaria persists, follow-up testing should be performed each day for two more days (2). 
 
@@ -540,7 +720,15 @@ If initial diagnostic evaluation is negative and clinical suspicion for malaria 
 [[e) Wait 24 hours for the smear to result. In the meantime, see a different patient|Repeat Smear]]
 </tw-passagedata><tw-passagedata pid="46" name="Repeat Smear" tags="" position="1150,350" size="100,100">Thin blood smear returns negative for malaria, microfilaria, trypanosomes, or babesia parasites.
 
-24 hours has passed. The patient is clinically deteriorating. She has become quite somnolent. You wonder if she will be able to protect her airway. Her vitals are as follows: temperature 38.6°C; SpO2 94% on room air, respiratory rate 18, heart rate 90, and blood pressure 110/70. Her labs are largely unchanged.
+24 hours has passed. The patient is clinically deteriorating. She has become quite somnolent. You wonder if she will be able to protect her airway. Her vitals are as follows: 
+
+* Temperature 38.6°C
+* SpO2 94% on room air
+* Respiratory Rate 18
+* Heart Rate 90
+* Blood Pressure 110/70. 
+
+Her labs are largely unchanged.
 &#39;&#39;
 (text-colour:red)[What would you like to do now?]&#39;&#39;
 [[a) Repeat a thin blood smear|Repeat Smear2]]
@@ -552,7 +740,7 @@ If initial diagnostic evaluation is negative and clinical suspicion for malaria 
 
 Due to cost, lack of necessary equipment, and long turn-around time, your laboratory has asked you to choose a different diagnostic method for malaria. 
 
-[[Return to diagnostic options|MalariaDx]]</tw-passagedata><tw-passagedata pid="48" name="Artesunate" tags="" position="1325,425" size="100,100">
+[[Return to diagnostic options|MalariaDx]]</tw-passagedata><tw-passagedata pid="48" name="Artesunate" tags="" position="1275,400" size="100,100">
 
 If diagnostic tools are not readily available and clinical suspicion for P. falciparum infection remains, it may be reasonable to make a presumptive diagnosis and treat empirically, given the potential severity of infection. A presumptive diagnosis depends on the patient&#39;s epidemiologic exposure, certain symptoms such as fever,  certain abnormal laboratory findings such as anemia, and lastly in the //&#39;&#39;absence&#39;&#39;// of a clear alternative diagnosis. However, the clinical presentation of malaria overlaps with many other infections. Empiric therapy may negatively affect the accuracy of subsequent diagnostic testing.
 
@@ -570,9 +758,14 @@ Furthermore, initiating the patient on quinine is only indicated if there is a c
 (text-colour:red)[&#39;&#39;Are you concerned about artesunate resistance to P. falciparum, given this patient&#39;s travel to Indonesia?&#39;&#39;
 ][[No - start the patient only on Artesunate|NoArtResistance]]
 [[Yes|YesArtResistance]]
-[[Not sure|learnArtResistance]]</tw-passagedata><tw-passagedata pid="50" name="new pt" tags="" position="1800,1250" size="100,100">The patient was continued on antimicrobial therapy. Over the subsequent 48 hours, she continued to clinically worsen with ongoing fevers and obtundation. She was ultimately intubated for airway protection.
+[[Not sure|learnArtResistance]]</tw-passagedata><tw-passagedata pid="50" name="new pt" tags="" position="1775,1150" size="100,100">The patient was continued on antimicrobial therapy. Over the subsequent 48 hours, she continued to clinically worsen with ongoing fevers and obtundation. She was ultimately intubated for airway protection.
 
-The presence of small ring-enhancing lesions in the brain suggests tuberculomas in the setting of possible disseminated tuberculosis. The most concerning possible cause of her current presentation is TB meningitis with tuberculomas given the lymphocytic pleocytosis with marked hypoglycorrhachia with ring enhancing brain lesions and leptomeningeal enhancement, keeping in mind her recent travel to an endemic country. Her chest imaging is not specific with bilateral interstitial infiltrates but given it is not completely normal, we need to consider active pulmonary TB with possible dissemination and therefore place her in airborne isolation until she can provide three negative AFB sputum smears. 
+&lt;span style=&quot;font-family: &#39;Times New Roman&#39;, serif; font-style: italic;”&gt;Alright, so you had all the clues in front of you — TB endemic country, meningitis, ring-enhancing lesions, lymphocytic pleocytosis, and hypoglycorrhachia. All the signs were there, clear as day, and yet you chose to wait. You thought you’d just sit back, see another patient, and wait for those LP results to come in. But let me tell you something: when it comes to TB meningitis, time is not your friend.
+
+You had a high clinical suspicion. We’re talking about disseminated TB with tuberculomas, a ticking time bomb in her brain. And you know what you should have done? You should have started her on RIPE therapy immediately. You don’t wait for the LP to confirm what’s already staring you in the face. This is TB meningitis. It can’t wait.
+
+Now the patient has deteriorated. She’s intubated. And this all could’ve been avoided if you’d acted on the signs, not waited on the test. RIPE isn’t just a treatment; it’s life-saving when the suspicion is that high. And let’s not forget her chest imaging — it’s not normal. Bilateral interstitial infiltrates? You’re looking at possible active pulmonary TB, and that means airborne isolation. You don’t take chances here.&lt;/span&gt;
+
 
 On day 5, a repeat lumbar puncture was performed with the following CSF fluid analysis: 382 WBC with 43% lymphocytes, protein 134, glucose 39, an opening pressure of 27. CSF bacterial cultures remained negative for growth. Her IGRA returned positive and a Mycobacterium. tuberculosis Complex (MTb) PCR in the CSF returned positive. 
 
@@ -608,7 +801,9 @@ This woman has an aseptic lymphocytic meningitis with multifocal ring-enhancing 
 
 15. Montoya JG, Liesenfeld O. Toxoplasmosis. Lancet. 2004;363(9425):1965-1976. doi:10.1016/S0140-6736(04)16412-X
 
-16. McCabe RE, Brooks RG, Dorfman RF, Remington JS. Clinical spectrum in 107 cases of toxoplasmic lymphadenopathy. Rev Infect Dis. 1987;9(4):754-774. doi:10.1093/clinids/9.4.754</tw-passagedata><tw-passagedata pid="52" name="CMP" tags="" position="775,150" size="100,100">A comprehensive metabolic panel was repeated with results shown below. The patient had a normal lactate level as well.
+16. McCabe RE, Brooks RG, Dorfman RF, Remington JS. Clinical spectrum in 107 cases of toxoplasmic lymphadenopathy. Rev Infect Dis. 1987;9(4):754-774. doi:10.1093/clinids/9.4.754
+
+17. Hasbun R, Abrahams J, Jekel J, Quagliarello VJ. Computed tomography of the head before lumbar puncture in adults with suspected meningitis. N Engl J Med. 2001;345(24):1727-1733. doi:10.1056/NEJMoa010399</tw-passagedata><tw-passagedata pid="52" name="CMP" tags="" position="775,150" size="100,100">A comprehensive metabolic panel was repeated with results shown below. The patient had a normal lactate level as well.
 
 &lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/CMP.png&quot;&gt;
 
@@ -618,20 +813,21 @@ This woman has an aseptic lymphocytic meningitis with multifocal ring-enhancing 
 [[Blood smear|Blood smear]]
 [[Obtain additional history|Malaria Hx]]</tw-passagedata><tw-passagedata pid="53" name="RDT" tags="" position="1175,125" size="100,100">Being the inquisitive clinican that you are, you decide to walk down to the microbiology and pathology department and discuss the case with your friendly lab technician and pathologist. Fortunately, it&#39;s 2 pm in the afternoon, so the pathologist is still at their desk. 
 
-You learn that at your institution, when there is a concern for Plasmodifum falciparum, the recommendation is to place the following order: 
-	 (text-colour:yellow)[&#39;&#39;Combined manual microscopy and antigen assay&#39;&#39;]
+You learn that at your institution, when there is a concern for Plasmodium falciparum, the recommendation is to place the following order: 
+	 (text-colour:orange)[&#39;&#39;Combined manual microscopy and antigen assay&#39;&#39;]
+
 
 They show you the antigen test, called //BinaxNOW™ Malaria// 
 
-&lt;img src=&quot;BinaxMalaria.jpeg&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/binax.png&quot; style=&quot;width: 25%; border-radius: 20px;&quot;&gt;
 
-This is an vitro immunochromatographic assay for the &#39;&#39;qualitative&#39;&#39; rapid detection of Plasmodium antigens circulating in human blood. It requires a small blood sample collected by fingerstick. The test targets the histidine-rich protein II (HRPII) antigen specific to Plasmodium falciparum and a pan-malarial antigen common to all four malaria species capable of infecting humans - P. falciparum, P. vivax, P. ovale, and P. malariae.
+This is an vitro immunochromatographic assay for the &#39;&#39;(text-colour:red)[qualitative]&#39;&#39; rapid detection of Plasmodium antigens circulating in human blood. It requires a small blood sample collected by fingerstick. The test targets the histidine-rich protein II (HRPII) antigen specific to Plasmodium falciparum and a pan-malarial antigen common to all four malaria species capable of infecting humans - P. falciparum, P. vivax, P. ovale, and P. malariae. BinaxNOW® Malaria Test, the only available RDT for malaria in the United States
 
 
 
 While the thin smear is being prepared, the antigen test is performed and in 15 minutes, you have your result:
 
-(align:&quot;&lt;==&quot;)+(box:&quot;===XXXXXXXX===&quot;)[&#39;&#39;Negative for malaria antigens&#39;&#39;]
+(align:&quot;&lt;==&quot;)+(box:&quot;===XXXXXXXX===&quot;)[&#39;&#39;(text-colour:yellow)[Negative for malaria antigens]&#39;&#39;]
 Per your institution&#39;s protocol, the negative antigen test is followed up with a thick smear microscopy.
 
 
@@ -648,7 +844,7 @@ The patient recieved now two doses of parenteral artesunate. On your re-evaluati
 [[a) Artesunate toxicity - stop artesunate and start IV quinine|quinine]]
 [[b) Artesunate toxicity - continue and monitor for improvement after 24 hours of therapy|quinine]]
 [[c) This is not artesunate toxicity but consistent with the disease process. Continue and monitor.|endMalaria]]
-[[d) A different diagnosis - return to options to choose a different pathogen|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="55" name="YesArtResistance" tags="" position="1425,300" size="100,100">
+[[d) A different diagnosis - return to options to choose a different pathogen|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="55" name="YesArtResistance" tags="" position="1350,275" size="100,100">
 Quinine is warranted for severe malaria in areas with established artemisinin resistance; in such cases, IV artesunate and quinine are coadministered in full doses. Artemisinin resistance in P. falciparum is  prevalent in parts of Cambodia, the Lao People’s Democratic Republic, Myanmar, Thailand and Vietnam. There is currently no evidence for artemisinin resistance outside these areas, according to the latest WHO guidelines for Malaria (6).
 
 (text-colour:red)[&#39;&#39;What would you like to do at this time?&#39;&#39;]
@@ -679,7 +875,7 @@ Quinine is warranted for severe malaria in areas with established artemisinin re
 This patient ultimately did not have malaria. Through your preceeding choices, you encountered that her rapid diagnostic malaria test and thin (and thick) blood smears were negative for malaria. Although this patient is returning from an endemic country with a fever, the lack of diagnostic evidence for malaria should have prompted you to consider other infectious etiologies. The clinical presentation of malaria overlaps with many other infections. Empiric therapy may have negatively affected this patient&#39;s condition (particularly if you chose quinine), but more so, lack of appropriate therapy for the correct infection has lead to this patient&#39;s clinical worsening, among other  infection control exposure concerns (//&#39;&#39;(text-colour:cyan)[wink]&#39;&#39;//).
 
 
-You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning</tw-passagedata><tw-passagedata pid="59" name="Repeat Smear2" tags="" position="1125,625" size="100,100">Thin blood smear returns negative for malaria, microfilaria, trypanosomes, or babesia parasites.
+You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning</tw-passagedata><tw-passagedata pid="59" name="Repeat Smear2" tags="" position="1150,650" size="100,100">Thin blood smear returns negative for malaria, microfilaria, trypanosomes, or babesia parasites.
 
 The patient&#39;s clinical status begins to deteriorate further.
 
@@ -694,31 +890,51 @@ The patient&#39;s clinical status begins to deteriorate further.
 &#39;&#39;(text-colour:red)[What would you like to do next?]&#39;&#39;
 [[a) Start high dose IV meropenem|meropenem]]
 [[b) Check blood cultures|bloodCxMelio]]
-[[c) This is unlikely to be meliodosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="61" name="CxAllMelio" tags="" position="150,825" size="100,100">Urine cultures at 24 hours are negative for growth.
+[[c) This is unlikely to be meliodosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="61" name="CxAllMelio" tags="" position="150,875" size="100,100">&lt;span class=&quot;rainbow-glitter-text&quot;&gt;Great.&lt;/span&gt; Growth of B. pseudomallei from culture of any site is diagnostic of melioidosis. (text-colour:cyan)[&#39;&#39;No second-guessing, no hesitation&#39;&#39;]. That’s melioidosis. You don’t play around with this one—you act, and you act fast.
 
-Sputum cultures reveal normal oropharyngeal flora.
+Blood cultures are positive for //B. pseudomallei// in 40-70% of individuals with melioidosis. In cultures from nonsterile sites, however, it can be overgrown by other organisms, including normal flora. Therefore, to enhance organism recovery, sputum and swabs from skin lesions, throat, and rectum should be plated on or inoculated directly into selective media. More importantly,(text-colour:cyan)[ the clinical laboratory should be made aware of the suspicion for melioidosis when specimens are submitted], in nonendemic areas. 
 
-At this time, the patient has become less responsive and appears quite obtunded. Her vitals are as follows: temperature 38.2°C; SpO2 94% on room air, respiratory rate 18, heart rate 86, and blood pressure 104/65. There is mild increase of aspartate transaminase (AST) and alanine transaminase (ALT), though they remain with the normal limits. Her total bilirubin,  alkaline phosphatase, and creatinine levels are normal.
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:red)[Urine cultures at 24 hours are negative for growth.
 
-A lumbar puncture is performed and reveals an elevated opening pressure (OP) at 42 cmH2O. Xanthochromic cerebrospinal (CSF) fluid was noted with a WBC of 382 cells/cmm with a differential of 90% lymphocytes, 7% polymorphonuclear cells and 3% monocytes; RBC 62 cells/cmm; glucose 9 mg/dL, protein 180 mg/dL. CSF pathology reveled an exuberant inflammatory response, depicting numerous lymphocytes, macrophages, and plasma cells. CSF gram stain is negative for organisms. CSF culture is pending.
+Sputum cultures reveal normal oropharyngeal flora].
+]
+At this time, the patient has become less responsive and appears quite obtunded. Her vitals are as follows: 
+
+* Temperature 38.2°C; SpO2 94% on room air
+* Respiratory Rate 18
+* Heart Rate 86 
+* Blood Pressure 104/65
+
+There is mild increase of aspartate transaminase (AST) and alanine transaminase (ALT), though they remain with the normal limits. Her total bilirubin, alkaline phosphatase, and creatinine levels are normal.
 
 &#39;&#39;(text-colour:red)[What would you like to do next?]&#39;&#39;
-[[a) Start high dose IV meropenem|meropenem]]
-[[b) Check blood cx|bloodCxMelio]]
-[[c) This is unlikely to be meliodosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="62" name="bloodCxMelio" tags="" position="0,850" size="100,100">Blood cultures are ordered and negative for growth after 24 hours.
+[[a) Obtain blood cultures|bloodCxMelio]]
+[[b) Perform a lumbar puncture|LPMelio]]
+[[c) This is unlikely to be meliodosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="62" name="bloodCxMelio" tags="" position="25,825" size="100,100">&lt;span class=&quot;glitter-text&quot;&gt; Excellent choice.&lt;/span&gt;. You saw the signs, stayed sharp, and made the right call. &#39;&#39;(text-colour:red)[That’s how it’s done.]&#39;&#39; Keep that up, and you’re gonna save the patient&#39;s life. 
 
-&#39;&#39;(text-colour:red)[What would you like to do next?]&#39;&#39;
+When melioidosis is suspected, specimens are collected from various sites to maximize the chances of diagnosis, including blood, sputum, urine, and, if present, purulent drainage.
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[(text-colour:red)[Blood cultures are ordered and negative for growth after 24 hours.]
+]
+&#39;&#39;(text-colour:white)[What would you like to do next?]&#39;&#39;
 [[a) Obtain sputum and urine cultures|CxAllMelio]]
 [[b) Lumbar puncture|LPMelio]]
-[[c) This is unlikely to be meliodosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="63" name="meropenem" tags="" position="150,1200" size="100,100">The patient was placed on IV meroepenem at a higher dose (40 mg/kg up to 2 g IV every eight hours) given her CNS involvement . Over the subsequent 48 hours, she continued to clinically worsen with ongoing fevers and obtundation. She was ultimately intubated for airway protection.
+[[c) This is unlikely to be meliodosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="63" name="meropenem" tags="" position="0,1175" size="100,100">The patient was placed on IV meroepenem at a higher dose (40 mg/kg up to 2 g IV every eight hours) given her CNS involvement . Over the subsequent 48 hours, she continued to clinically worsen with ongoing fevers and obtundation. She was ultimately intubated for airway protection. 
+(text-colour:cyan)[
+Not the best call. You missed an important clue. But hey, this is how you learn. Take a moment, figure out what went wrong, and come back stronger. You&#39;ll get it right next time. ]
 
 
-&#39;&#39;(text-colour:red)[Discussion]&#39;&#39;
-This patient ultimately did not have meliodosis. Through your preceeding choices, you encountered that her cultures, particularly blood cultures, returned negative for growth of //Burkholderia pseudomallei//. Although this patient is returning from an endemic country with a fever and a CXR concerning for a pneumonia, the lack of diagnostic evidence for meliodosis should have prompted you to consider other infectious etiologies. Empiric therapy may have negatively affected this patient&#39;s condition, but more so, lack of appropriate therapy for the correct infection has lead to this patient&#39;s clinical worsening, among other infection control exposure concerns (//&#39;&#39;(text-colour:cyan)[wink]&#39;&#39;//).</tw-passagedata><tw-passagedata pid="64" name="Strep" tags="" position="550,800" size="100,100">Very good choice. This patient has fever, //mild// nuchal rigidity, headache, and altered mental status. You have to rule out bacterial meningitis! It is a medical emergency, and immediate steps must be taken to establish the cause and start effective antibiotics. Bacterial meningitis that is left untreated or treated very late in its course is almost uniformly (text-colour:red)[&#39;&#39;fatal&#39;&#39;]. 
+&#39;&#39;(text-colour:red)[(b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[Discussion]]&#39;&#39;
+This patient ultimately did not have meliodosis. Through your preceeding choices, you encountered that her cultures, particularly blood cultures, returned negative for growth of //Burkholderia pseudomallei//. Although this patient is returning from an endemic country with a fever and a CXR concerning for a pneumonia, the lack of diagnostic evidence for meliodosis should have prompted you to consider other infectious etiologies. Empiric therapy may have negatively affected this patient&#39;s condition, but more so, lack of appropriate therapy for the correct infection has lead to this patient&#39;s clinical worsening, among other infection control exposure concerns //&#39;&#39;(text-colour:white)[(wink)]&#39;&#39;//.
+
+You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning.</tw-passagedata><tw-passagedata pid="64" name="Strep" tags="" position="525,850" size="100,100">&lt;span class=&quot;glow&quot;&gt;Good choice.&lt;/span&gt; You’re thinking, and that’s good. That’s where it starts. But now, you gotta push further. Dig deeper. The difference between good and great is in the details—stay sharp, stay focused, and don’t settle for just ‘good enough.’ &#39;&#39;You’ve got more in you&#39;&#39;.
+
+
+This patient has fever, //mild// nuchal rigidity, headache, and altered mental status. You have to rule out bacterial meningitis! It is a medical emergency, and immediate steps must be taken to establish the cause and start effective antibiotics. Bacterial meningitis that is left untreated or treated very late in its course is almost uniformly (text-colour:red)[&#39;&#39;fatal&#39;&#39;]. 
 
 The most common cause of bacterial meningitis in the world is //Streptococcus pneumoniae //, according to a systematic review and meta-analysis (12). Separating by region of the world, //S. pneumoniae// was the most common cause of bacterial meningitis in all adults ranging from 9.6% in Western Pacific to 38% in Europe to 75.2% in Africa. This review was not able to perform meta-analysis for the South-East Asia region.
 
-&#39;&#39;(text-colour:red)[What would you like to obtain at this time?]&#39;&#39;
+&#39;&#39;(text-colour:red)[What would you like to do at this time?]&#39;&#39;
 [[a1) Start IV vancomycin, IV ceftriaxone, and IV acyclovir|Strep ABX]]
 [[a2) Start IV vancomycin and IV piperacillin-tazobactam|Vancosyn]]
 [[a3) Start IV vancomycin, IV ceftriaxone and dexamethasone|Strep ABXwDex]]
@@ -727,7 +943,7 @@ The most common cause of bacterial meningitis in the world is //Streptococcus pn
 Describe what you see in the MRI images below
 
 Panel A
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI_A.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_A.png&quot;&gt;
 
 &lt;input type=&quot;text&quot; id=&quot;response&quot; style=&quot;border: 2px solid white;&quot;&gt;
 &lt;button onclick=&quot;
@@ -745,40 +961,47 @@ Panel A
 &lt;p id=&quot;responseMessage&quot;&gt;&lt;/p&gt;
 
 Panel B
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI_B.png&quot;&gt;
-
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_B.png&quot;&gt;
 Panel C
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI_C.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_C.png&quot;&gt;
 
 Panel D
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI_D.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_D.png&quot;&gt;
 
-[[Answer|MRI Read Toxo]]</tw-passagedata><tw-passagedata pid="66" name="ELISA" tags="" position="225,125" size="100,100">In acute infection, toxoplasma-specific IgM antibodies usually appear within one week and continue to rise. The IgM titer subsequently declines and disappears, which in some patients may take months (). Toxoplasma-specific IgG antibodies subsequently follow within approximately two weeks of primary infection, peak within approximately eight weeks, and generally persist for life.
+[[Answer|MRI Read Toxo]]</tw-passagedata><tw-passagedata pid="66" name="ELISA" tags="" position="200,100" size="100,100">&#39;&#39;Strong selection.
+&#39;&#39;
+For immunocompetent patients with suspected acute toxoplasmosis infection, serologic testing is typically used as the initial diagnostic step. In acute infection, toxoplasma-specific IgM antibodies usually appear within one week, continue to rise, eventually decline and disappear, which in some patients may take months. Toxoplasma-specific IgG antibodies subsequently follow within approximately two weeks of primary infection, peak within approximately eight weeks, and generally persist for life. 
 
-Her toxoplasmosis IgM and IgG titer are both negative.
+For immunocompromised patients with central nervous system lesions, a definitive diagnosis requires a compatible clinical syndrome (eg, headache, neurologic symptoms, fever), characteristic lesion(s) by brain imaging, detection of toxoplasma DNA in CSF or the presence of the organism in a biopsy specimen. However, in many cases, a presumptive diagnosis is made based upon the clinical presentation, and empiric treatment is administered. For these patients, response to therapy is supportive of the diagnosis.
+
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;Her toxoplasmosis IgM and IgG titer are both negative&#39;&#39;.]
 
 
 &#39;&#39;(text-colour:red)[What would you like to do now?]&#39;&#39;
 [[a) Brain MRI|MRIToxo]]
 [[b) Lumbar puncture|LPToxo]]
-[[c) This is unlikely toxoplasmosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="67" name="LPToxo" tags="" position="350,150" size="100,100">A lumbar puncture on day 2 revealed an elevated opening pressure (OP) at 42 cmH2O. Xanthochromic cerebrospinal (CSF) fluid was noted with a WBC of 382 cells/cmm with a differential of 90% lymphocytes, 7% polymorphonuclear cells and 3% monocytes; RBC 62 cells/cmm; glucose 9 mg/dL, protein 180 mg/dL. CSF pathology reveled an exuberant inflammatory response, depicting numerous lymphocytes, macrophages, and plasma cells. 
+[[c) Brain biopsy|ToxoBiopsy]]
+[[d) Toxoplasmosis encephalitis is a clinical syndrome. No further tests are needed. Initiate Pyrimethamine and sulfadiazine|Leucovorin]]
+[[e) This is unlikely toxoplasmosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="67" name="LPToxo" tags="" position="350,175" size="100,100">A lumbar puncture on day 2 revealed an elevated opening pressure (OP) at 42 cmH2O. Xanthochromic cerebrospinal (CSF) fluid was noted with a WBC of 382 cells/cmm with a differential of 90% lymphocytes, 7% polymorphonuclear cells and 3% monocytes; RBC 62 cells/cmm; glucose 9 mg/dL, protein 180 mg/dL. CSF pathology reveled an exuberant inflammatory response, depicting numerous lymphocytes, macrophages, and plasma cells. 
 
 
 &#39;&#39;(text-colour:red)[What would you like to do now?]&#39;&#39;
 [[a) Brain MRI|MRIToxo]]
 [[b) Initiate Pyrimethamine and sulfadiazine|Leucovorin]]
-[[c) This is unlikely toxoplasmosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="68" name="MRI Read Toxo" tags="" position="225,425" size="100,100">Figure 4. Brain MRI (Panel A-D) shows numerous ring-enhancing lesions throughout the cerebrum and cerebellum, some of which are concerning for superimposed hemorrhage. There is also leptomeningeal nodular enhancement of the left frontal sulci and the right sylvian fissure. There is no midline shift.
+[[c) Check an ELISA|ELISA]]
+[[d) This is unlikely toxoplasmosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="68" name="MRI Read Toxo" tags="" position="125,400" size="100,100">Figure 4. Brain MRI (Panel A-D) shows numerous ring-enhancing lesions throughout the cerebrum and cerebellum, some of which are concerning for superimposed hemorrhage. There is also leptomeningeal nodular enhancement of the left frontal sulci and the right sylvian fissure. There is no midline shift.
 
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI_A.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_A.png&quot;&gt;
 Panel A: Axial T2 post gadolinium with several ring-enhancing small lesions 
 
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI_B.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_B.png&quot;&gt;
 Panel B: Axial T1
 
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI_C.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_C.png&quot;&gt;
 Panel C: T1 hyperintense lesions in the L temporal lobe and along the L temporal sulci 
 
-&lt;img src=&quot;/Users/noorakazanji/Documents/Clinical Teaching Book/Images/Case 1/MRI_D.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_D.png&quot;&gt;
 Panel D: Axial T1 with innumerable subcentimeter foci of enhancing lesions associated with susceptibility abnormality in the right frontal, bilateral temporal lobes, occipital lobes, and left cerebellum hemisphere
 
 
@@ -787,7 +1010,7 @@ Panel D: Axial T1 with innumerable subcentimeter foci of enhancing lesions assoc
 [[b) Initiate Pyrimethamine and sulfadiazine|Leucovorin]]
 [[c) Check an ELISA|ELISA]]
 [[d) Have the patient undergo a brain biopsy|ToxoBiopsy]]
-[[e) This is unlikely toxoplasmosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="69" name="Leucovorin" tags="" position="425,500" size="100,100">You choose to initiate the patient on pyrimethamine (100 mg loading dose followed by 50 mg daily) plus sulfadiazine (1 g QID) 
+[[e) This is unlikely toxoplasmosis. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="69" name="Leucovorin" tags="" position="700,325" size="100,100">You choose to initiate the patient on pyrimethamine (100 mg loading dose followed by 50 mg daily) plus sulfadiazine (1 g QID) 
 
 If the patient is allergic to sulfa (do you know what her allergies are?), then you should replace sulfadiazine with one of the options below while considering sulfa desensitization unless she has a severe reaction such as Stevens Johnson Syndrome.
 
@@ -811,20 +1034,24 @@ Alternatives to sulfadiazine are clindamycin, atovoquone, and azithromycin.
 &quot;&gt;Submit&lt;/button&gt;
 &lt;p id=&quot;responseMessage&quot;&gt;&lt;/p&gt;
 
-[[Next|Leucovorin2]] </tw-passagedata><tw-passagedata pid="70" name="Leucovorin2" tags="" position="275,800" size="100,100">Leucovorin, also known as folinic acid, is sometimes given along with treatment for toxoplasmosis because it can help to counteract the side effects of pyrimethamine.
+[[Next|Leucovorin2]] </tw-passagedata><tw-passagedata pid="70" name="Leucovorin2" tags="" position="425,450" size="100,100">Leucovorin, also known as folinic acid, is sometimes given along with treatment for toxoplasmosis because it can help to counteract the side effects of pyrimethamine.
 
 Pyrimethamine is a folate antagonist, meaning it interferes with the metabolism of folic acid. This interference with folate metabolism can lead to side effects such as bone marrow suppression and megaloblastic anemia.
 
 Leucovorin is a form of folate that can bypass the metabolic block caused by pyrimethamine. By providing the body with a form of folate that is not affected by pyrimethamine, leucovorin helps to mitigate these side effects and maintain the necessary folate levels for normal cell function.
 
-[[Next|EndToxo]]</tw-passagedata><tw-passagedata pid="71" name="EndToxo" tags="" position="500,675" size="100,100">The patient was placed on Pyrimethamine, atovaquone and leucovorin calcium (25 mg daily). Over the subsequent 48 hours, she continued to clinically worsen with ongoing fevers and obtundation. She was ultimately intubated for airway protection.
+[[Next|EndToxo]]</tw-passagedata><tw-passagedata pid="71" name="EndToxo" tags="" position="400,625" size="100,100">The patient was placed on pyrimethamine, sulfadiazine and leucovorin calcium (25 mg daily). Over the subsequent 48 hours, she continued to clinically worsen with ongoing fevers and obtundation. She was ultimately intubated for airway protection.
 
 
 &#39;&#39;(text-colour:red)[Discussion]&#39;&#39;
-This patient ultimately did not have toxoplasmosis. Through your preceeding choices, you encountered that her serologies were negative for acute toxoplasmosis. IgM should have ideally returned positive by now, being 2-3 weeks into her symptom onset. If you ordered an MRI, it did reveal multiple ring-enhancing lesions, though smaller than might be expected with toxo. However there were findings on the MRI that were also inconsistent with toxoplasmosis. Empiric therapy may have negatively affected this patient&#39;s condition, but more so, lack of appropriate therapy for the correct infection has lead to this patient&#39;s clinical worsening, among other infection control exposure concerns (//&#39;&#39;(text-colour:cyan)[wink]&#39;&#39;//).</tw-passagedata><tw-passagedata pid="72" name="DENVIGM" tags="" position="525,1425" size="100,100">
+This patient ultimately did not have toxoplasmosis. Through your preceeding choices, you encountered that her serologies were negative for acute toxoplasmosis (if you chose to check her serologies which would have been the prudent choice). If she had toxoplasmosis acute infection, IgM should have ideally returned positive by now, being 2-3 weeks into her symptom onset. If you ordered an MRI, it did reveal multiple ring-enhancing lesions, though smaller than might be expected with toxo. However there were findings on the MRI that were also inconsistent with toxoplasmosis. Empiric therapy may have negatively affected this patient&#39;s condition, but more so, lack of appropriate therapy for the correct infection has lead to this patient&#39;s clinical worsening, among other infection control exposure concerns (//&#39;&#39;(text-colour:cyan)[wink]&#39;&#39;//).
+
+You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning</tw-passagedata><tw-passagedata pid="72" name="DENVIGM" tags="" position="525,1475" size="100,100">&lt;span class=“glow”&gt;Nice&lt;/span&gt;.
+
 IgM can be detected as early as four days after symptom onset (9). An elevated IgM with a clinical syndrome consistent with dengue is widely used to establish a presumptive diagnosis. The diagnosis can also be confirmed via IgM seroconversion between paired acute and recovery phase specimens (obtained 10-14 days after the acute phase). If the titer rises fourfold or greater, this can establish a diagnosis of acute DENV. 
 
-DENV-IgM is obtained and returns normal.
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;DENV-IgM is obtained and returns normal.&#39;&#39;]
+
 
 &#39;&#39;(text-colour:red)[What would you like to do now?]&#39;&#39;
 [[Repeat IgM in 10 days|RepeatIgMDENV]]
@@ -834,7 +1061,7 @@ DENV-IgM is obtained and returns normal.
 
 [[Return|f. Dengue]] to previous choices
 
-</tw-passagedata><tw-passagedata pid="74" name="DENVPCR" tags="" position="125,1775" size="100,100">Reverse-transcriptase polymerase chain reaction assay (RT-PCR) will be positive in the first 5-7 days of illness. Detection of viral nucleic acid in serum by RT-PCR is positive in the first five days of illness and detection of viral antigen nonstructural protein 1 is positive during the first seven days of illness. Keep in mind that these two tests, although they have high specificity, they are more labor intensive and costly. 
+</tw-passagedata><tw-passagedata pid="74" name="DENVPCR" tags="" position="75,1675" size="100,100">Detection of viral nucleic acid in serum by RT-PCR is positive in the first 5 days of illness and detection of viral antigen nonstructural protein 1 is positive during the first 7 days of illness. Keep in mind that these two tests, although they have high specificity, they are more labor intensive and costly. 
 
 Unfortunately, you learn at your institution, Dengue-viral RT-PCR or antigen detection is not available.
 
@@ -842,44 +1069,42 @@ Unfortunately, you learn at your institution, Dengue-viral RT-PCR or antigen det
 [[Order Dengue-specific IgM|DENVIGM]]
 [[If you already ordered Dengue-specific IgM, repeat it in 10 days to check titer changes|RepeatIgMDENV]]
 [[DENV is a clinical diagnosis. No other testing is needed. Continue supportive care.|DENVNONE]]
-[[This is unlikely to be DENV. Return to diagnoses|DIAGNOSES]]</tw-passagedata><tw-passagedata pid="75" name="DENVNONE" tags="" position="525,1800" size="100,100">Diagnosing Dengue virus infection in a returning traveler from Indonesia involves a combination of clinical assessment, laboratory testing, and consideration of the patient&#39;s travel history.
+</tw-passagedata><tw-passagedata pid="75" name="DENVNONE" tags="" position="425,1775" size="100,100">Diagnosing Dengue virus infection in a returning traveler from Indonesia involves a combination of clinical assessment, laboratory testing, and consideration of the patient&#39;s travel history.
 
 Your observation is astute in recognizing that clinical symptoms alone can sometimes provide sufficient grounds for diagnosis, rendering laboratory testing potentially unnecessary. This is particularly relevant if the patient presents with a cluster of symptoms consistent with Dengue virus infection, including fever, rash, arthralgia, myalgia, headache, hemorrhage, or shock.
 
-However, the patient did not report several of these symptoms.  
+&#39;&#39;However, the patient did not report several of these symptoms.  
+&#39;&#39;
 
-To remind you of the initial presentation, the case is provided below:
-
-//A previously healthy 47-year-old Indonesian born woman is brought to the emergency department (ED) in winter of 2021 with two weeks of &#39;&#39;headaches&#39;&#39;, &#39;&#39;fevers&#39;&#39;, &#39;&#39;chills&#39;&#39;, and &#39;&#39;lethargy&#39;&#39;. The patient has been living in the United States (US) for the last 10 years and travelled to visit her family in Papua, Indonesia one month prior to presentation. Two weeks into her stay, she developed&#39;&#39; diffuse bilateral headaches&#39;&#39;, fevers, and chills. She then developed a &#39;&#39;brief cough that resolved after 2 &#39;&#39;&#39;&#39;days&#39;&#39;. She did not have any rashes, abdominal pain, vomiting, diarrhea, chest pain or shortness of breath. She returned to the US two days ago. Today, her husband found her to be increasingly lethargic and brought her to your ED.//
-
-
-Neurologic manifestations associated with DENV infection include encephalopathy and seizures, however these are relatively rare (~1%) compared to the more common symptoms (10). However, although rare, it is interesting to note that some patients can present with only neurologic symptoms of fever, headache, and lethargy without other common characteristic features of DENV infection (11). In such cases, the diagnosis has been supported by serology or PCR in CSF. 
+Neurologic manifestations associated with DENV infection include encephalopathy and seizures, however these are relatively rare (~1%) compared to the more common symptoms (10). It is interesting to note that few patients can present with only neurologic symptoms of fever, headache, and lethargy without other common characteristic features of DENV infection (11). In such cases, the diagnosis has been supported by serology or PCR in CSF. 
 
 Given the above information, the better answer would have been to consider other etiologies.
 
 [[Next|EndDengue]]
 
-</tw-passagedata><tw-passagedata pid="76" name="RepeatIgMDENV" tags="" position="800,1700" size="100,100">On day 10, you repeat the Dengue IgM and it returns negative. Unfortunately, the patient continued to clinically worsen with ongoing fevers and obtundation. She was  intubated for airway protection on day 5.
+</tw-passagedata><tw-passagedata pid="76" name="RepeatIgMDENV" tags="" position="900,1750" size="100,100">You decide to wait 10 days to repeat the Dengue IgM. Unfortunately, during the time you waited to repeat the test, the patient continued to clinically worsen with ongoing fevers and obtundation. She was intubated for airway protection several days ago.
 
-Over the subsequent several days, the patient repeatedly failed her spontaneous breathing trials. 
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;The repeat Dengue IgM returns negative&#39;&#39;].
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;...again&#39;&#39;].
 
-On repeat examination, the following was determined:
+
+Over the subsequent several days, the patient repeatedly failed her spontaneous breathing trials. On repeat examination, the following was determined:
     Cranial Nerve Function:
-        Lack of response to visual stimuli.
-        Absence of pupillary responses to light.
-        Bilateral absence of eye movements and eyelid responses to stimulation.
-        Lack of facial movement, including absence of facial expression and symmetry.
-        No response to swallowing or gag reflex testing.
+        * Lack of response to visual stimuli.
+        * Absence of pupillary responses to light.
+        * Bilateral absence of eye movements and eyelid responses to stimulation.
+        * Lack of facial movement, including absence of facial expression and symmetry.
+        * No response to swallowing or gag reflex testing.
 
     Motor Function:
-        Complete absence of voluntary movement in all extremities.
-        No response to painful stimuli or attempts to withdraw from noxious stimuli.
-        Flaccid muscle tone throughout the body.
-        Lack of purposeful movements.
+        * Complete absence of voluntary movement in all extremities.
+        * No response to painful stimuli or attempts to withdraw from noxious stimuli.
+        * Flaccid muscle tone throughout the body.
+        * Lack of purposeful movements.
 
     Reflexes:
-        Absence of deep tendon reflexes (DTRs) in all extremities.
-        Absence of plantar reflex (Babinski sign) or other reflex responses.
+        * Absence of deep tendon reflexes (DTRs) in all extremities.
+        * Absence of plantar reflex (Babinski sign) or other reflex responses.
 
 She was determined to have global neurological impairment concerning for likely brain death. 
 
@@ -890,7 +1115,7 @@ She was determined to have global neurological impairment concerning for likely 
 This patient ultimately did not have DENV. Through your preceeding choices, you may have encountered that her serology was negative and that her symptoms were not entirely suggestive of DENV infection. Although this patient is returning from an endemic country with a fever, the lack of diagnostic and clinical evidence should have prompted you to consider other infectious etiologies. The clinical presentation of DENV overlaps with many other infections. Lack of appropriate therapy for the correct infection has lead to this patient&#39;s clinical worsening, among other  infection control exposure concerns (//&#39;&#39;(text-colour:cyan)[wink]&#39;&#39;//).
 
 
-You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning</tw-passagedata><tw-passagedata pid="78" name="Strep ABXwDex" tags="" position="825,575" size="100,100">You start the patient on IV vancomycin and IV ceftriaxone 2 grams every 12 hours (note the q12 hour dosing for optimal CNS penetration). 
+You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning</tw-passagedata><tw-passagedata pid="78" name="Strep ABXwDex" tags="" position="775,625" size="100,100">You start the patient on IV vancomycin and IV ceftriaxone 2 grams every 12 hours (note the q12 hour dosing for optimal CNS penetration). 
 
 Ideally, to improve yield of growth, blood cultures and CSF analysis/cultures should be obtained before empiric IV antimicrobial is administered. However, antimicrobials should &#39;&#39;(text-colour:red)[not]&#39;&#39; be delayed by more than 2 hours to prevent mortality from potential bacterial or herpes simplex meningitis, which also needs to be ruled out in this patient. 
 
@@ -917,7 +1142,6 @@ A lumbar puncture is the key next step if this is not already ordered. It will g
 
 
 &#39;&#39;How long would you continue steroids? Would you want to put her on prophylaxis?&#39;&#39;
-
 [[Click here for answer|SteroidsProph]]</tw-passagedata><tw-passagedata pid="81" name="EndDengue2" tags="" position="800,1900" size="100,100">
 &#39;&#39;(text-colour:red)[Discussion]&#39;&#39;
 This patient ultimately did not have DENV. Through your preceeding choices, you may have encountered that her serology was negative and that her symptoms were not entirely suggestive of DENV infection. Although this patient is returning from an endemic country with a fever, the lack of diagnostic and clinical evidence should have prompted you to consider other infectious etiologies. The clinical presentation of DENV overlaps with many other infections. Lack of appropriate therapy for the correct infection has lead to this patient&#39;s clinical worsening, among other  infection control exposure concerns (//&#39;&#39;(text-colour:cyan)[wink]&#39;&#39;//).
@@ -929,7 +1153,12 @@ You have reached the end of this case. Click [[here|Initial Presentation]] to re
 &#39;&#39;
 CSF meningitis and encephalitis panel returned negative for detection of Escherichia coli, Hemophilus influenza, Listeria, Neisseria meningitidis, Streptococcus, Cryptococcus, cytomegalovirus, human herpes virus 6, human, varicella zoster virus, enterovirus, and herpes simplex virus 1/2. The following studies also returned negative: blood cultures and CSF aerobic cultures after 2 days of incubation, serum and CSF cryptococcal antigen, urine Streptococcus and Legionella antigen, and a human immunodeficiency virus screen. 
 
-</tw-passagedata><tw-passagedata pid="83" name="RepeatHSVPCR" tags="" position="1775,900" size="100,100">Repeat CSF HSV 1/2 PCR returns negative.
+
+&#39;&#39;(text-colour:red)[What would you like to do at this time?]&#39;&#39;
+[[a1) Start IV vancomycin, IV ceftriaxone, and continue IV acyclovir|Strep ABX]]
+[[a2) Add IV vancomycin and IV piperacillin-tazobactam|Vancosyn]]
+[[a3) Discuss a brain biopsy with neurosurgery|BrainBx]]
+[[a4) This is not Streptococcal meningitis or HSV encephalitis. Return to diagnoses|DIAGNOSES]] </tw-passagedata><tw-passagedata pid="83" name="RepeatHSVPCR" tags="" position="1775,900" size="100,100">Repeat CSF HSV 1/2 PCR returns negative.
 
 At this time, the patient&#39;s serum creatinine has doubled. Over the subsequent 48 hours, she continued to clinically worsen with ongoing fevers and obtundation. She was ultimately intubated for airway protection.
 
@@ -937,10 +1166,10 @@ Through your preceeding choices, you may have encountered that although her CSF 
 
 
 You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning</tw-passagedata><tw-passagedata pid="84" name="MRIStrep" tags="" position="400,1125" size="100,100">
-Describe what you see in the MRI images below
+Describe the key finding in the MRI image below:
 
 Panel A
-&lt;img src=&quot;MRI_A.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_A.png&quot;&gt;
 
 &lt;input type=&quot;text&quot; id=&quot;response&quot; style=&quot;border: 2px solid white;&quot;&gt;
 &lt;button onclick=&quot;
@@ -958,27 +1187,27 @@ Panel A
 &lt;p id=&quot;responseMessage&quot;&gt;&lt;/p&gt;
 
 Panel B
-&lt;img src=&quot;MRI_B.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_B.png&quot;&gt;
 
 Panel C
-&lt;img src=&quot;MRI_C.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_C.png&quot;&gt;
 
 Panel D
-&lt;img src=&quot;MRI_D.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_D.png&quot;&gt;
 
 [[Answer|MRI Read Correct2]]
-</tw-passagedata><tw-passagedata pid="85" name="MRI Read Correct2" tags="" position="400,1325" size="100,100">Figure 4. Brain MRI (Panel A-D) shows numerous ring-enhancing lesions throughout the cerebrum and cerebellum, some of which are concerning for superimposed hemorrhage. There is also leptomeningeal nodular enhancement of the left frontal sulci and the right sylvian fissure. There is no midline shift.
+</tw-passagedata><tw-passagedata pid="85" name="MRI Read Correct2" tags="" position="225,1225" size="100,100">Figure 4. Brain MRI (Panel A-D) shows numerous ring-enhancing lesions throughout the cerebrum and cerebellum, some of which are concerning for superimposed hemorrhage. There is also leptomeningeal nodular enhancement of the left frontal sulci and the right sylvian fissure. There is no midline shift.
 
-&lt;img src=&quot;MRI_A.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_A.png&quot;&gt;
 Panel A: Axial T2 post gadolinium with several ring-enhancing small lesions 
 
-&lt;img src=&quot;MRI_B.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_B.png&quot;&gt;
 Panel B: Axial T1
 
-&lt;img src=&quot;MRI_C.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_C.png&quot;&gt;
 Panel C: T1 hyperintense lesions in the L temporal lobe and along the L temporal sulci 
 
-&lt;img src=&quot;MRI_D.png&quot;&gt;
+&lt;img src=&quot;/Users/noorakazanji/Documents/Twine/Stories/Case1/MRI_D.png&quot;&gt;
 Panel D: Axial T1 with innumerable subcentimeter foci of enhancing lesions associated with susceptibility abnormality in the right frontal, bilateral temporal lobes, occipital lobes, and left cerebellum hemisphere
 
 
@@ -986,22 +1215,137 @@ Panel D: Axial T1 with innumerable subcentimeter foci of enhancing lesions assoc
 [[a1) Start IV vancomycin, IV ceftriaxone, and IV acyclovir|Strep ABX]]
 [[a2) Start IV vancomycin and IV piperacillin-tazobactam|Vancosyn]]
 [[a3) Start IV vancomycin, IV ceftriaxone and dexamethasone|Strep ABXwDex]]
-[[a4) Lumbar puncture and blood cultures STAT|LP Strep]]</tw-passagedata><tw-passagedata pid="86" name="IRIS3" tags="" position="1750,2625" size="100,100">The worsening of her clinical status prompting admission is most likely secondary to TB-parodoxical reaction. 
-
-Paradoxical reaction, in patients with TB meningitis, is characterized by either worsening of pre-existing tuberculous lesions or the appearance of new tuberculous lesions in patients who show initial improvement following anti-tuberculosis treatment. The clinical or radiological deterioration associated with such a reaction may fallaciously suggest either a drug resistant state or treatment failure, and might even prompt to look for an alternative diagnosis (13). Expansion of existing cerebral tuberculomas and appearance of new tuberculomas, hydrocephalus, and optochiasmatic and spinal arachnoiditis, were common paradoxical manifestations (14).
-
-Paradoxical reactions in these patients result because mycobacterial cell wall antigens are present in the affected brain tissues and trigger an excessive and exaggerated inflammatory reaction following treatment with anti-tuberculosis drugs. 
-
-Interestingly, according to a prospective cohort study, it was observed that (text-colour:green)[&#39;&#39;female gender&#39;&#39;], concomitant HIV infection, and a shorter duration of illness, were significant predictors of paradoxical reactions in patients with tuberculous meningitis. Females exhibit more-robust immune responses to antigenic challenges, like infection and vaccination, in comparison to that in males (14).
-
-Note that in human immunodeficiency virus (HIV)-infected patients, paradoxical reactions are termed as the immune reconstitution inflammatory syndrome (IRIS), which is a condition characterized with worsening of pre-existing infective processes, following treatment with antiretroviral therapy. 
+[[a4) Lumbar puncture and blood cultures STAT|LP Strep]]
+[[a5) This is not Strep meningitis. Return to diagnoses|DIAGNOSES]] </tw-passagedata><tw-passagedata pid="86" name="IRIS3" tags="" position="1750,2625" size="100,100">The worsening of her clinical status prompting admission is most likely secondary to TB-parodoxical reaction. 
 
 
-[[Next|Discussion]]</tw-passagedata><tw-passagedata pid="87" name="ToxoBiopsy" tags="" position="25,225" size="100,100">For immunocompetent patients with suspected acute toxoplasmosis infection, serologic testing is typically used as the initial diagnostic step.
+(b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[&#39;&#39;Consideration in TB meningitis&#39;&#39;]
+* Paradoxical reaction, in patients with TB meningitis, is characterized by either worsening of pre-existing tuberculous lesions or the appearance of new tuberculous lesions in patients who show initial improvement following anti-tuberculosis treatment. 
+* The clinical or radiological deterioration associated with such a reaction may fallaciously suggest either a drug resistant state or treatment failure, and might even prompt to look for an alternative diagnosis (13). 
+* Expansion of existing cerebral tuberculomas and appearance of new tuberculomas, hydrocephalus, and optochiasmatic and spinal arachnoiditis, were common paradoxical manifestations (14).
 
-For immunocompromised patients with central nervous system lesions, a definitive diagnosis requires a compatible clinical syndrome (eg, headache, neurologic symptoms, fever), characteristic lesion(s) by brain imaging, detection of toxoplasma DNA in CSF or the presence of the organism in a biopsy specimen. However, in many cases, a presumptive diagnosis is made based upon the clinical presentation, and empiric treatment is administered. For these patients, response to therapy is supportive of the diagnosis. It is interesting to note that patients who are severely immunocompromised may not be able to mount an antibody response [15].
+(b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[&#39;&#39;Pathophysiology&#39;&#39;]
+* Paradoxical reactions in these patients result because mycobacterial cell wall antigens are present in the affected brain tissues and trigger an excessive and exaggerated inflammatory reaction following treatment with anti-tuberculosis drugs. 
 
-This patient is immunocompetent. Toxoplasmosis acute infection is highly unlikely in a patient who has a negative Toxoplasma-specific IgM antibody. However, if the test was obtained within one week of developing symptoms, and clinical suspicion remains high, the IgM should be repeated.</tw-passagedata></tw-storydata>
+(b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[&#39;&#39;Risk Factors&#39;&#39;]
+* Interestingly, according to a prospective cohort study, it was observed that (text-colour:green)[&#39;&#39;female gender&#39;&#39;], concomitant HIV infection, and a shorter duration of illness, were significant predictors of paradoxical reactions in patients with tuberculous meningitis. 
+* Females exhibit more-robust immune responses to antigenic challenges, like infection and vaccination, in comparison to that in males (14).
+
+(b4r:&quot;none&quot;,&quot;none&quot;,&quot;solid&quot;)+(b4r-colour:white)[&#39;&#39;HIV&#39;&#39;]
+* Note that in human immunodeficiency virus (HIV)-infected patients, paradoxical reactions are termed as the immune reconstitution inflammatory syndrome (IRIS), which is a condition characterized with worsening of pre-existing infective processes, following treatment with antiretroviral therapy. 
+
+
+[[Next|Discussion]]</tw-passagedata><tw-passagedata pid="87" name="ToxoBiopsy" tags="" position="0,225" size="100,100">
+&lt;span style=&quot;font-family: &#39;Times New Roman&#39;, serif; font-style: italic;&quot;&gt;
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Let me make something crystal clear for you. You chose a brain biopsy, but let me break it down why that decision? That’s a poor choice.
+
+First off, this patient is immunocompetent. You know what that means? She&#39;s highly unlikely to have CNS toxoplasmosis. You’re barking up the wrong tree right there.
+
+Second, even if she did — and that’s a big ‘if’ — the diagnosis isn’t through some risky brain biopsy. No, we go through serology. That’s right, an ELISA test. We check for IgM and IgG antibodies. That’s the play. Simple. Effective. Smart.
+
+Now, you want to know why a biopsy isn’t the move? It’s dangerous. It’s risky. Mortality rates anywhere from 0 to 3.1%. Major morbidity between 0.5 and 9%. That’s major complications — life-changing, career-altering complications. And for what? To establish a diagnosis we can make without putting the patient’s life on the line?
+
+So ask yourself: was that decision the right one? Or was it reckless? You make the call. But know this — in medicine, just like in life, you don’t take unnecessary risks when a safer, proven path exists. So let&#39;s try this again.]
+&lt;/span&gt;
+
+
+(text-colour:red)[&#39;&#39;What is your next step in diagnosing toxoplasmosis at this time?
+&#39;&#39;][[a) ELISA|ELISA]]
+[[b) Lumbar puncture|LPToxo]]
+[[c) Toxoplasmosis encephalitis is a clinical syndrome. No further tests are needed. Initiate Pyrimethamine and sulfadiazine|Leucovorin]]
+[[c) This is unlikely toxoplasmosis. Return to diagnoses|DIAGNOSES]]
+
+
+
+Notes:
+Although brain biopsy is effective in establishing the diagnosis in most patients, it is associated with significant risk. The overall reported complication rate has ranged from 0 to 3.1 percent mortality, 0.5 to 9 percent major morbidity, and 2 to 4 percent minor morbidity (Antinori A, Neurology, 1997).
+</tw-passagedata><tw-passagedata pid="88" name="BrainBx" tags="" position="1600,700" size="100,100">&lt;span style=&quot;font-family: &#39;Times New Roman&#39;, serif; font-style: italic;&quot;&gt;Brain biopsy? No, no, no, that’s not just a wrong move—it’s (text-colour:red)[dangerous]. You don’t jump to something that invasive when there are safer, smarter options on the table. This is about doing what’s best for the patient, and right now, you’re causing more harm than good. You need to rethink your approach, because in this field, you don’t get second chances to make that kind of mistake.&lt;/span&gt;
+
+
+You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning</tw-passagedata><tw-passagedata pid="89" name="Igra" tags="" position="575,1050" size="100,100">
+&lt;span style=&quot;font-family: &#39;Times New Roman&#39;, serif; font-style: italic;&quot;&gt;(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Alright, listen up. You gave me the IGRA as your answer, and let me tell you something — that’s not completely wrong, but it’s far from right. A positive IGRA might support a diagnosis of TB, sure, but it doesn&#39;t establish active TB disease. And a negative result? That doesn’t rule it out either. So what you’re giving me is half of the truth, and in medicine, half the truth can lead to a whole lot of damage.
+
+When we’re talking about TB meningitis, we’re dealing with a different animal. You don’t just throw out an IGRA and call it a day. No, we need to step up the game. We need CSF analysis, we need a lumbar puncture. You’re looking for elevated protein, low glucose, and a predominance of lymphocytes. And if you really want to nail this diagnosis? You’re getting an AFB stain, CSF cultures, and PCR. That’s how you play it.
+
+So, was IGRA the worst answer? No. But was it the right answer for TB meningitis? Absolutely not. And in this game, the stakes are too high to settle for ‘close enough.’ You have to get it right. Every time.]&lt;/span&gt;
+
+(text-colour:orange)[&#39;&#39;What would you like to do at this time?&#39;&#39;
+][[a. MRI|MRI]]
+[[b. Lumbar puncture|LPincorrect]]
+[[c. Head CT without contrast|CThead]]
+[[d. Blood cultures|Blood cultures]]
+[[e. Consult Neurology|Neurology consultation]]
+[[f. Gather additional history|Additional history]]
+</tw-passagedata><tw-passagedata pid="90" name="CThead" tags="" position="675,1400" size="100,100">You chose &lt;span class=&quot;glitter-text&quot;&gt;wisely.&lt;/span&gt;
+
+Given the concern for meningitis, the patient requires an urgent lumbar puncture. &#39;&#39;However&#39;&#39;, given her abnormal level of conciousness, a clinical feature associated with an abnormal finding on head CT, she should undergo a non-contrast head CT scan to rule out occult intracranial abnormalities and thus avoid the risk of brain herniation resulting from the removal of cerebrospinal fluid (NEJM, Hasbun, 2001). 
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;A head CT is urgently performed and negative for hemorrhage or a space occupying lesion&#39;&#39;.
+
+(text-colour:orange)[&#39;&#39;What is your next step in diagnosing TB meningitis for this patient?&#39;&#39;
+][[a. MRI|MriTooEarly]]
+[[b. LP|LP]]
+[[c. Sputum Sample with AFB smear and culture|Sputum]]
+[[d. Blood cultures|Blood cultures]]
+[[e. Obtain an interferon-gamma release assay (IGRA)|Igra]]</tw-passagedata><tw-passagedata pid="91" name="MriTooEarly" tags="" position="950,1025" size="100,100">&lt;span style=&quot;font-family: &#39;Times New Roman&#39;, serif;&quot;&gt;(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXX=&quot;)[Alright, so you’re thinking TB meningitis. Good. You’ve got a patient from Indonesia, a TB-endemic area, showing signs of meningitis — the wheels are turning in the right direction. But then you choose a brain MRI as your &lt;em&gt;next&lt;/em&gt; step? Let me stop you right there.
+
+Look, MRI is a solid tool. No one&#39;s denying that. It’s more specific, more sensitive than a CT scan — sure. But here&#39;s the reality: it&#39;s expensive, it’s time-consuming, and in a case like this, time is &lt;em&gt;everything&lt;/em&gt;. A brain MRI might not happen for 24 hours. And with meningitis? Every hour counts. You don’t have that kind of time to waste.
+
+The best test? It&#39;s not a scan, it&#39;s a lumbar puncture. You get in, you get that CSF, and you get answers fast. Elevated protein, low glucose, lymphocytes — that’s what you’re looking for. And then you send it for AFB stain, cultures, PCR. That&#39;s how you make the diagnosis, and that’s how you treat your patient in time to make a difference.
+
+So MRI? Eventually, yeah. But right now, in this moment? You go for the lumbar puncture. That’s your next step, and you don’t wait. Not with meningitis. Not when the clock is ticking.]&lt;/span&gt;
+
+
+Since you ordered the MRI, click next to see the results.
+
+[[Next|MRI]]
+</tw-passagedata><tw-passagedata pid="92" name="LPincorrect" tags="" position="625,1725" size="100,100">&lt;span style=&quot;font-family: &#39;Times New Roman&#39;, serif; font-style: italic;&quot;&gt;(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Alright, alright! Now that’s what I’m talking about. You chose the lumbar puncture, and let me tell you, that’s the right answer. You didn’t get lost in the noise; you went straight for the most important test. That LP? It’s the key to diagnosing TB meningitis. It gives you everything you need — elevated protein, low glucose, lymphocytes — that’s how you know you’re dealing with it.
+
+But listen, don’t get too comfortable. We’ve got to keep our focus sharp. We’ve also got to play it safe. Given her abnormal level of conciousness, a clinical feature associated with an abnormal finding on head CT, she should undergo a non-contrast head CT scan to rule out occult intracranial abnormalities and thus avoid the risk of brain herniation resulting from the removal of cerebrospinal fluid (NEJM, Hasbun, 2001).
+
+See, this is what separates a good clinician from a great one: knowing when to act and what to do. And you did that. You knew the path forward, you took it, and that’s what’s going to save lives in this game.]&lt;/span&gt;
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;A head CT is urgently performed and negative for hemorrhage or a space occupying lesion&#39;&#39;.
+]
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[A lumbar puncture on day 2 revealed an elevated opening pressure (OP) at 42 cmH2O. Xanthochromic cerebrospinal (CSF) fluid was noted with a WBC of 382 cells/cmm with a differential of 90% lymphocytes, 7% polymorphonuclear cells and 3% monocytes; RBC 62 cells/cmm; glucose 9 mg/dL, protein 180 mg/dL. CSF pathology reveled an exuberant inflammatory response, depicting numerous lymphocytes, macrophages, and plasma cells. 
+
+CSF meningitis and encephalitis panel returned negative for detection of Escherichia coli, Hemophilus influenza, Listeria, Neisseria meningitidis, Streptococcus, Cryptococcus, cytomegalovirus, human herpes virus 6, human, varicella zoster virus, enterovirus, and herpes simplex virus 1/2. The following studies also returned negative: blood cultures after 2 days of incubation, serum and CSF cryptococcal, urine Streptococcus and Legionella antigen, and a human immunodeficiency virus screen. 
+]
+
+(text-colour:orange)[&#39;&#39;What do you think about the glucose of 9 in CSF. What is the differential given this finding?&#39;&#39;]
+[[hypoglycorrhachia]]</tw-passagedata><tw-passagedata pid="93" name="new pt1" tags="" position="1050,1525" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXX=&quot;)[//So you’ve got your sputum samples, you’re waiting on those AFB smears. Good. But this is not the time to sit back and relax. This patient has signs of active TB, possibly disseminated, with meningitis in the mix. You’ve got a big decision to make, and trust me — it matters.//
+]
+Let’s break down your options.
+
+Check an IGRA? Nope. That’s not going to confirm active disease. It’s not the move here.
+
+Get a brain MRI? Sure, it could help later, but that’s not the priority right now. Time is everything.
+
+Now here’s where you need to focus: you place this patient in airborne precautions immediately. We’re talking about a potential case of active pulmonary TB, and she’s a risk to everyone around her until proven otherwise. Three negative AFB smears — that’s what you need before you even think about taking her out of isolation. Until then? She stays in airborne.
+
+And don’t stop there. You also start this patient on RIPE therapy right now. You’ve got strong clinical suspicion, her presentation is screaming TB meningitis, and you can’t afford to wait. RIPE saves lives, plain and simple.
+
+So, what’s your next step? You isolate her, and you start treatment. Anything else — like seeing another patient — could cost you more than time. It could cost you this patient’s life.
+
+
+You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning.</tw-passagedata><tw-passagedata pid="94" name="BadAbx" tags="" position="1200,1550" size="100,100">The patient was continued on antibiotic therapy for bacterial meningitis. Over the subsequent 48 hours, she continued to clinically worsen with ongoing fevers and obtundation. She was ultimately intubated for airway protection.
+
+
+&#39;&#39;(text-colour:red)[Discussion]&#39;&#39;
+You were on the right track with consdiering TB in this patient, including the possibility of disseminated TB with meningitis. The presence of small ring-enhancing lesions in the brain suggests tuberculomas in the setting of possible disseminated tuberculosis. The LP also demonstrated lymphocytic pleocytosis with marked hypoglycorrhachia with ring enhancing brain lesions and leptomeningeal enhancement, keeping in mind her recent travel to an endemic country. Her chest imaging is not specific with bilateral interstitial infiltrates but given it is not completely normal, we need to consider active pulmonary TB with possible dissemination. Lack of appropriate therapy for the correct infection has lead to this patient&#39;s clinical worsening.
+
+
+You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning</tw-passagedata><tw-passagedata pid="95" name="fool" tags="" position="1125,1750" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[Hold up. Linezolid? Penicillin? Really? You had all the clues right there, pointing you straight to disseminated TB, and instead of starting RIPE, you threw together this wild antibiotic concoction? Linezolid and penicillin? That’s not just wrong, that’s straight-up reckless.
+
+Let me tell you something, foo, this isn’t some guessing game. You’re dealing with TB meningitis — a serious, life-threatening condition. And you go with that? What were you even thinking? You had the signs right in front of you. This patient needed RIPE — Rifampin, Isoniazid, Pyrazinamide, Ethambutol. That’s the treatment for TB, and that’s what you should have done. You’re out here playing around with penicillin like this is some kind of random infection.
+
+In medicine, you don’t just throw stuff at the wall and see what sticks. You need to know what you’re doing. You’ve got a responsibility to your patient. You’re treating people’s lives, not experimenting with cocktails of antibiotics that have no business in this case.
+
+So here’s the deal: you get your head in the game, you stay sharp, and you treat based on the evidence in front of you.]
+
+
+You have reached the end of this case. Click [[here|Initial Presentation]] to return to the beginning
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
